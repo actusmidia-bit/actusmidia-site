@@ -451,6 +451,28 @@
     .planos-nota { text-align:center; margin-top:28px; font-size:13px; color:var(--white-3); }
     .planos-nota a { color:var(--green); text-decoration:none; }
 
+    /* ── CARD PROJETOS ── */
+    .plano-projeto { grid-column:1/-1; padding:44px 48px; background:linear-gradient(125deg,rgba(148,237,0,0.07) 0%,var(--black-3) 40%,rgba(30,20,60,0.6) 100%); border:1px solid var(--green-border); box-shadow:0 0 0 1px rgba(148,237,0,0.08),0 30px 80px rgba(0,0,0,0.5),0 0 60px rgba(148,237,0,0.06); position:relative; overflow:hidden; }
+    .plano-projeto::before { content:''; position:absolute; top:-80px; right:-80px; width:380px; height:380px; background:radial-gradient(circle,rgba(148,237,0,0.13) 0%,transparent 65%); pointer-events:none; z-index:0; }
+    .plano-projeto::after { content:'PROJETOS'; position:absolute; bottom:-28px; right:32px; font-family:var(--font-head); font-size:100px; font-weight:900; color:rgba(148,237,0,0.04); letter-spacing:0.04em; pointer-events:none; z-index:0; line-height:1; }
+    .plano-projeto > * { position:relative; z-index:1; }
+    .plano-projeto .plano-badge { background:linear-gradient(135deg,#a78bfa,#7c3aed); color:#fff; top:-13px; left:32px; transform:none; }
+    .plano-projeto-inner { display:flex; flex-direction:column; gap:36px; }
+    @media(min-width:900px) { .plano-projeto-inner { flex-direction:row; align-items:center; gap:56px; } }
+    .plano-projeto-head { flex-shrink:0; min-width:240px; }
+    .plano-projeto-icon { width:60px; height:60px; background:var(--gradient-green); border-radius:18px; display:flex; align-items:center; justify-content:center; margin-bottom:22px; box-shadow:0 0 30px rgba(148,237,0,0.4); }
+    .plano-projeto-icon svg { width:26px; height:26px; color:var(--black); }
+    .plano-projeto-head .plano-nome { font-size:30px; letter-spacing:0.06em; }
+    .plano-projeto-head .plano-sub { font-size:13px; color:var(--white-3); line-height:1.65; max-width:280px; margin-top:8px; }
+    .plano-projeto-feats { flex:1; display:grid; grid-template-columns:1fr; gap:11px; list-style:none; margin-bottom:0; }
+    @media(min-width:600px) { .plano-projeto-feats { grid-template-columns:1fr 1fr; gap:11px 36px; } }
+    .plano-projeto-cta-wrap { flex-shrink:0; display:flex; flex-direction:column; align-items:center; gap:6px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:var(--radius-lg); padding:32px 36px; text-align:center; }
+    .plano-projeto-price { font-family:var(--font-head); font-size:26px; font-weight:900; color:var(--white); letter-spacing:0.02em; }
+    .plano-projeto-price-note { font-size:11px; color:var(--white-3); line-height:1.5; margin-bottom:12px; }
+    .plano-cta-projeto { display:flex; align-items:center; justify-content:center; gap:9px; background:var(--gradient-green); color:var(--black); padding:16px 32px; border-radius:100px; font-size:15px; font-weight:700; text-decoration:none; transition:var(--transition); font-family:var(--font-body); white-space:nowrap; box-shadow:0 0 30px rgba(148,237,0,0.3); letter-spacing:0.01em; }
+    .plano-cta-projeto:hover { box-shadow:0 0 55px rgba(148,237,0,0.55); transform:translateY(-2px); }
+    .plano-cta-projeto svg { width:16px; height:16px; }
+
   </style>
 </head>
 <body>
@@ -923,6 +945,37 @@
         <a href="https://api.whatsapp.com/send?phone=5567999001752&text=Ol%C3%A1%2C+tenho+interesse+no+plano+Growth+da+Actus!" target="_blank" class="plano-cta">
           <i data-lucide="trending-up" style="width:15px;height:15px;"></i>Quero o Growth
         </a>
+      </div>
+
+      <!-- PROJETOS ESPECIAIS -->
+      <div class="plano-card plano-projeto reveal" style="transition-delay:0.3s;">
+        <span class="plano-badge">Sob Medida</span>
+        <div class="plano-projeto-inner">
+
+          <div class="plano-projeto-head">
+            <div class="plano-projeto-icon"><i data-lucide="sparkles"></i></div>
+            <p class="plano-nome">PROJETOS</p>
+            <p class="plano-sub">Soluções personalizadas para negócios com demandas únicas. Escopo, prazo e entrega definidos juntos — do zero.</p>
+          </div>
+
+          <ul class="plano-itens plano-projeto-feats">
+            <li><i data-lucide="check-circle"></i>Cobertura de Eventos &amp; Congressos</li>
+            <li><i data-lucide="check-circle"></i>Vídeos Institucionais</li>
+            <li><i data-lucide="check-circle"></i>Lançamentos de Produto</li>
+            <li><i data-lucide="check-circle"></i>Mini-documentários Corporativos</li>
+            <li><i data-lucide="check-circle"></i>Campanhas Sazonais Completas</li>
+            <li><i data-lucide="check-circle"></i>Escopo 100% Personalizado</li>
+          </ul>
+
+          <div class="plano-projeto-cta-wrap">
+            <p class="plano-projeto-price">Sob consulta</p>
+            <p class="plano-projeto-price-note">Orçamento via reunião<br/>de alinhamento gratuita</p>
+            <a href="https://api.whatsapp.com/send?phone=5567999001752&text=Ol%C3%A1%2C+quero+discutir+um+projeto+personalizado+com+a+Actus!" target="_blank" class="plano-cta-projeto">
+              <i data-lucide="calendar"></i>Agendar Reunião
+            </a>
+          </div>
+
+        </div>
       </div>
 
     </div>
