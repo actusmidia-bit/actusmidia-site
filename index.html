@@ -348,9 +348,9 @@
     .team-grid { display:grid; grid-template-columns:1fr; gap:20px; }
     .team-card { background:var(--black-3); border:1px solid rgba(255,255,255,0.07); border-radius:var(--radius-lg); overflow:hidden; transition:var(--transition); }
     .team-card:hover { border-color:var(--green-border); transform:translateY(-4px); box-shadow:0 0 0 1px rgba(148,237,0,0.1),0 20px 50px rgba(0,0,0,0.6); }
-    .team-card-photo { width:100%; aspect-ratio:4/3; background:var(--black-4); position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+    .team-card-photo { width:100%; aspect-ratio:3/4; background:var(--black-4); position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; }
     .team-card-photo::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--gradient-green); z-index:2; }
-    .team-card-photo img { width:100%; height:100%; object-fit:cover; object-position:top center; display:block; filter:grayscale(15%); transition:filter 0.4s ease,transform 0.4s ease; }
+    .team-card-photo img { width:100%; height:100%; object-fit:cover; object-position:center 10%; display:block; filter:grayscale(15%); transition:filter 0.4s ease,transform 0.4s ease; }
     .team-card:hover .team-card-photo img { filter:grayscale(0%); transform:scale(1.03); }
     .team-avatar-fallback { width:80px; height:80px; border-radius:50%; background:var(--gradient-green); display:flex; align-items:center; justify-content:center; font-family:var(--font-head); font-size:28px; font-weight:900; color:var(--black); }
     .team-card-info { padding:22px 24px 26px; }
@@ -830,13 +830,12 @@
         <div class="team-grid">
           <div class="team-card">
             <div class="team-card-photo">
-              <img src="profile%20pic%20lucca.png" alt="Lucca Tonetto — Dir. Criativo Actus Mídia" />
+              <img src="lucca%20image.jpeg" alt="Lucca Tonetto — Dir. Criativo Actus Mídia" />
             </div>
             <div class="team-card-info">
               <p class="team-card-role">Dir. Criativo &amp; Sócio-Fundador</p>
               <h3 class="team-card-name">Lucca Tonetto</h3>
               <p class="team-card-bio">Especialista em linguagem visual e produções mobile-first. Responsável por ditar a estética e a narrativa de impacto dos conteúdos da agência.</p>
-              <div class="team-card-links"><a href="https://www.instagram.com/actusmidia/" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a></div>
             </div>
           </div>
           <div class="team-card">
@@ -847,7 +846,6 @@
               <p class="team-card-role">Dir. de Operações &amp; Sócio</p>
               <h3 class="team-card-name">João Pedro Pina</h3>
               <p class="team-card-bio">Focado em transformar a visão criativa em processos eficientes e escaláveis. Gestão de projetos e fluxos administrativos da agência.</p>
-              <div class="team-card-links"><a href="https://www.instagram.com/actusmidia/" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a></div>
             </div>
           </div>
         </div>
