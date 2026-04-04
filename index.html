@@ -109,8 +109,10 @@
     .logo-text .us  { color:var(--green); }
     .logo-text .sub { display:block; font-size:9px; font-weight:600; letter-spacing:0.22em; color:var(--white-3); text-transform:uppercase; margin-top:1px; }
     .nav-links { display:none; align-items:center; gap:4px; list-style:none; }
-    .nav-links a { font-size:13px; font-weight:500; color:var(--white-2); text-decoration:none; padding:8px 14px; border-radius:8px; transition:var(--transition); }
+    .nav-links a { font-size:13px; font-weight:500; color:var(--white-2); text-decoration:none; padding:8px 14px; border-radius:8px; transition:var(--transition); position:relative; }
     .nav-links a:hover { color:var(--green); background:var(--green-subtle); }
+    .nav-links a.nav-active { color:var(--green); background:var(--green-subtle); }
+    .nav-links a.nav-active::after { content:''; position:absolute; bottom:4px; left:50%; transform:translateX(-50%); width:4px; height:4px; background:var(--green); border-radius:50%; box-shadow:0 0 6px rgba(148,237,0,0.8); }
     .nav-actions { display:flex; align-items:center; gap:12px; }
     .hamburger { display:flex; flex-direction:column; gap:5px; cursor:pointer; padding:6px; background:none; border:none; }
     .hamburger span { display:block; width:22px; height:2px; background:var(--white); border-radius:2px; transition:var(--transition); }
@@ -189,9 +191,9 @@
     .portfolio-card:hover { transform:translateY(-4px); box-shadow:var(--glow-card); border-color:var(--green-border); }
     .portfolio-card:hover .portfolio-play { background:var(--green); color:var(--black); transform:scale(1.1); }
     .portfolio-thumb { position:absolute; inset:0; background:var(--black-4); overflow:hidden; }
-    .portfolio-thumb-gradient { position:absolute; inset:0; background:linear-gradient(to top, rgba(5,5,7,0.92) 0%, rgba(5,5,7,0.3) 50%, transparent 100%); z-index:1; }
-    .portfolio-thumb-placeholder { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
-    .portfolio-thumb-placeholder svg { width:48px; height:48px; color:var(--white-4); }
+    .portfolio-thumb video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top; display:block; transition:transform 0.6s ease; }
+    .portfolio-card:hover .portfolio-thumb video { transform:scale(1.04); }
+    .portfolio-thumb-gradient { position:absolute; inset:0; background:linear-gradient(to top, rgba(5,5,7,0.95) 0%, rgba(5,5,7,0.35) 55%, transparent 100%); z-index:1; }
     .portfolio-info { position:relative; z-index:2; padding:20px 18px; width:100%; }
     .portfolio-cat { font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--green); margin-bottom:6px; }
     .portfolio-title { font-size:14px; font-weight:700; color:var(--white); line-height:1.4; margin-bottom:10px; }
@@ -297,12 +299,8 @@
     .diferencial-content { max-width:640px; }
     .diferencial-content h2 { font-family:var(--font-head); font-size:clamp(26px,4vw,42px); font-weight:900; letter-spacing:-0.03em; line-height:1.15; margin-bottom:16px; }
     .diferencial-content p { font-size:16px; color:var(--white-3); line-height:1.75; max-width:540px; margin:0 auto; }
-    .diferencial-video-wrap { width:100%; max-width:900px; aspect-ratio:16/9; border-radius:var(--radius-lg); overflow:hidden; position:relative; background:var(--black-3); border:1px solid var(--green-border); box-shadow:var(--glow-card); }
-    .diferencial-video-placeholder { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; }
-    .diff-play-btn { width:72px; height:72px; background:var(--gradient-green); border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:var(--glow-green); transition:var(--transition); }
-    .diff-play-btn:hover { transform:scale(1.08); box-shadow:0 0 50px rgba(148,237,0,0.55); }
-    .diff-play-btn svg { width:28px; height:28px; color:var(--black); margin-left:4px; }
-    .diferencial-video-placeholder span { font-size:11px; font-weight:600; color:var(--white-3); letter-spacing:0.14em; text-transform:uppercase; }
+    .diferencial-video-wrap { width:100%; max-width:420px; aspect-ratio:9/16; border-radius:var(--radius-lg); overflow:hidden; position:relative; background:var(--black-3); border:1px solid var(--green-border); box-shadow:var(--glow-card); }
+    .diferencial-video-wrap video { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
 
     /* ── SECTION BRIDGE (separador serviços → processo) ── */
     .section-bridge { display:flex; align-items:center; gap:20px; margin:72px 0 56px; }
@@ -605,10 +603,9 @@
         <p>O público ignora o que parece comercial de TV. Ele para no que é autêntico. Por isso usamos smartphones de última geração com técnica cinematográfica — para entregar conteúdo feito para o smartphone, <strong style="color:var(--white);">gerando autoridade que converte</strong>, sem parar a sua rotina.</p>
       </div>
       <div class="diferencial-video-wrap reveal">
-        <div class="diferencial-video-placeholder">
-          <div class="diff-play-btn"><i data-lucide="play"></i></div>
-          <span>Behind the scenes · em breve</span>
-        </div>
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="est%C3%A9tica.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
@@ -624,44 +621,46 @@
     </div>
     <div class="portfolio-grid">
 
-      <!-- CARD 1 — substitua href pelo link do Reel -->
+      <!-- CARD 1 — CrossFit -->
       <a href="https://www.instagram.com/actusmidia/" target="_blank" class="portfolio-card reveal">
         <div class="portfolio-thumb">
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="cross%20fit%20(1).mp4" type="video/mp4">
+          </video>
           <div class="portfolio-thumb-gradient"></div>
-          <div class="portfolio-thumb-placeholder"><i data-lucide="video"></i></div>
-          <!-- FOTO THUMB → descomente e troque o src: -->
-          <!-- <img src="assets/portfolio-01.jpg" alt="Produção para Fitness" style="width:100%;height:100%;object-fit:cover;" /> -->
         </div>
         <div class="portfolio-info">
-          <p class="portfolio-cat">Fitness &amp; CrossFit</p>
+          <p class="portfolio-cat">CrossFit</p>
           <p class="portfolio-title">Reels de alta performance para esportes</p>
           <div class="portfolio-play"><i data-lucide="play"></i></div>
         </div>
       </a>
 
-      <!-- CARD 2 -->
+      <!-- CARD 2 — Estética -->
       <a href="https://www.instagram.com/actusmidia/" target="_blank" class="portfolio-card reveal" style="transition-delay:0.1s;">
         <div class="portfolio-thumb">
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="est%C3%A9tica.mp4" type="video/mp4">
+          </video>
           <div class="portfolio-thumb-gradient"></div>
-          <div class="portfolio-thumb-placeholder"><i data-lucide="scissors"></i></div>
-          <!-- <img src="assets/portfolio-02.jpg" alt="Produção para Barbearia" style="width:100%;height:100%;object-fit:cover;" /> -->
         </div>
         <div class="portfolio-info">
-          <p class="portfolio-cat">Barbearia &amp; Estética</p>
+          <p class="portfolio-cat">Estética</p>
           <p class="portfolio-title">Conteúdo orgânico que evidencia sua arte</p>
           <div class="portfolio-play"><i data-lucide="play"></i></div>
         </div>
       </a>
 
-      <!-- CARD 3 -->
+      <!-- CARD 3 — Bem-Estar -->
       <a href="https://www.instagram.com/actusmidia/" target="_blank" class="portfolio-card reveal" style="transition-delay:0.2s;">
         <div class="portfolio-thumb">
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="bem%20estar.mp4" type="video/mp4">
+          </video>
           <div class="portfolio-thumb-gradient"></div>
-          <div class="portfolio-thumb-placeholder"><i data-lucide="sparkles"></i></div>
-          <!-- <img src="assets/portfolio-03.jpg" alt="Produção para Estética" style="width:100%;height:100%;object-fit:cover;" /> -->
         </div>
         <div class="portfolio-info">
-          <p class="portfolio-cat">Estética &amp; Bem-Estar</p>
+          <p class="portfolio-cat">Bem-Estar</p>
           <p class="portfolio-title">Vídeos de procedimento que viraram referência no nicho</p>
           <div class="portfolio-play"><i data-lucide="play"></i></div>
         </div>
@@ -1108,6 +1107,20 @@
       if(t){ e.preventDefault(); t.scrollIntoView({ behavior:'smooth' }); }
     });
   });
+
+  // Active section indicator in nav
+  const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+  const sectionIds = Array.from(navAnchors).map(a => a.getAttribute('href').slice(1));
+  const sectionEls = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+  const setActive = id => {
+    navAnchors.forEach(a => {
+      a.classList.toggle('nav-active', a.getAttribute('href') === '#' + id);
+    });
+  };
+  const sectionObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) setActive(e.target.id); });
+  }, { threshold: 0.35, rootMargin: '-60px 0px -35% 0px' });
+  sectionEls.forEach(el => sectionObs.observe(el));
 
 </script>
 </body>
