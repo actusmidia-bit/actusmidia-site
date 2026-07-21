@@ -666,15 +666,15 @@
     <div class="hero-content">
       <div class="hero-badge"><span class="hero-badge-dot"></span>Agência Mobile-First · Campo Grande, MS</div>
       <h1 class="hero-title">
-        Levamos seu trabalho<br/>para quem precisa <em id="rotating-word">vê-lo.</em>
+        Onde se desenvolvem as próximas<br/>referências da <em>HOF.</em>
       </h1>
       <p class="hero-subtitle">
-        Na Actus, trabalhamos com <strong style="color:var(--white);">Mobile-First High-End</strong> — produção com estética de cinema feita com smartphone. Sem estúdio caro. Sem semanas de espera. Conteúdo nativo para ser consumido pelo smartphone e colocando sua marca na frente de quem importa.
+        Impulsione sua jornada e consolide sua autoridade no digital.
       </p>
       <div class="hero-cta">
-        <a href="https://api.whatsapp.com/send?phone=5567999001752&text=Ol%C3%A1%2C+vim+pelo+site+da+Actus+e+quero+meu+Diagn%C3%B3stico+Gratuito!" target="_blank" class="btn btn-primary">
-          <i data-lucide="zap" style="width:16px;height:16px;"></i>Quero Aparecer para Quem Importa
-        </a>
+        <button onclick="document.getElementById('modal-analise').style.display='flex'" class="btn btn-primary">
+          <i data-lucide="zap" style="width:16px;height:16px;"></i>Quero minha análise de perfil gratuita
+        </button>
         <a href="#portfolio" class="btn btn-outline">
           Ver nossos trabalhos<i data-lucide="arrow-down" style="width:14px;height:14px;"></i>
         </a>
@@ -1350,6 +1350,89 @@
   }, { threshold: 0.35, rootMargin: '-60px 0px -35% 0px' });
   sectionEls.forEach(el => sectionObs.observe(el));
 
+
+</script>
+
+<!-- ══════ MODAL ANÁLISE DE PERFIL ══════ -->
+<div id="modal-analise" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(5,5,7,0.85);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#101010;border:1px solid rgba(0,168,89,0.3);border-radius:18px;padding:40px 36px;max-width:440px;width:100%;position:relative;box-shadow:0 0 60px rgba(0,168,89,0.15);">
+    <button onclick="document.getElementById('modal-analise').style.display='none'" style="position:absolute;top:16px;right:18px;background:none;border:none;color:#a8a8a8;font-size:22px;cursor:pointer;line-height:1;">✕</button>
+    <div style="text-align:center;margin-bottom:28px;">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(0,168,89,0.12);border:1px solid rgba(0,168,89,0.3);border-radius:99px;padding:6px 14px;font-size:12px;color:#00A859;font-weight:600;letter-spacing:0.05em;margin-bottom:16px;">
+        <span style="width:6px;height:6px;background:#00A859;border-radius:50%;display:inline-block;"></span>ANÁLISE GRATUITA
+      </div>
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:600;color:#f5f5f5;line-height:1.25;margin-bottom:8px;">Vamos analisar<br/>seu perfil agora</h2>
+      <p style="color:#a8a8a8;font-size:14px;line-height:1.5;">Preencha abaixo e receba um diagnóstico real do seu Instagram — sem enrolação.</p>
+    </div>
+    <form id="form-analise" onsubmit="enviarAnalise(event)">
+      <div style="margin-bottom:16px;">
+        <label style="display:block;font-size:12px;color:#a8a8a8;font-weight:500;margin-bottom:6px;letter-spacing:0.04em;">NOME</label>
+        <input type="text" id="lead-nome" required placeholder="Seu nome completo" style="width:100%;background:#181818;border:1px solid #3a3a3a;border-radius:10px;padding:12px 14px;color:#f5f5f5;font-size:15px;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(0,168,89,0.6)'" onblur="this.style.borderColor='#3a3a3a'"/>
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="display:block;font-size:12px;color:#a8a8a8;font-weight:500;margin-bottom:6px;letter-spacing:0.04em;">INSTAGRAM</label>
+        <div style="position:relative;">
+          <span style="position:absolute;left:13px;top:50%;transform:translateY(-50%);color:#a8a8a8;font-size:15px;">@</span>
+          <input type="text" id="lead-instagram" required placeholder="seuperfil" style="width:100%;background:#181818;border:1px solid #3a3a3a;border-radius:10px;padding:12px 14px 12px 28px;color:#f5f5f5;font-size:15px;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(0,168,89,0.6)'" onblur="this.style.borderColor='#3a3a3a'"/>
+        </div>
+      </div>
+      <div style="margin-bottom:24px;">
+        <label style="display:block;font-size:12px;color:#a8a8a8;font-weight:500;margin-bottom:6px;letter-spacing:0.04em;">WHATSAPP</label>
+        <input type="tel" id="lead-whatsapp" required placeholder="(67) 99999-9999" style="width:100%;background:#181818;border:1px solid #3a3a3a;border-radius:10px;padding:12px 14px;color:#f5f5f5;font-size:15px;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(0,168,89,0.6)'" onblur="this.style.borderColor='#3a3a3a'"/>
+      </div>
+      <button type="submit" id="btn-enviar-analise" style="width:100%;background:linear-gradient(135deg,#00A859,#00d46e);border:none;border-radius:10px;padding:14px;color:#050507;font-size:15px;font-weight:700;cursor:pointer;letter-spacing:0.02em;transition:opacity 0.2s;">
+        Quero minha análise gratuita →
+      </button>
+      <p style="text-align:center;font-size:12px;color:#3a3a3a;margin-top:12px;">Sem spam. Sem compromisso.</p>
+    </form>
+    <div id="modal-sucesso" style="display:none;text-align:center;padding:20px 0;">
+      <div style="font-size:40px;margin-bottom:12px;">✅</div>
+      <h3 style="color:#f5f5f5;font-size:20px;margin-bottom:8px;">Recebemos seu pedido!</h3>
+      <p style="color:#a8a8a8;font-size:14px;">Redirecionando para o WhatsApp...</p>
+    </div>
+  </div>
+</div>
+
+<script>
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzur0DsycWUi8fL3nuB2DyeU4Ue2q7mubBd8aHZGfKHUUIERU_QqtCUv_TFHK3iVqMs/exec';
+
+async function enviarAnalise(e) {
+  e.preventDefault();
+  const nome      = document.getElementById('lead-nome').value.trim();
+  const instagram = document.getElementById('lead-instagram').value.trim().replace(/^@/, '');
+  const whatsapp  = document.getElementById('lead-whatsapp').value.trim();
+  const btn       = document.getElementById('btn-enviar-analise');
+
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+
+  try {
+    await fetch(SHEETS_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nome, instagram, whatsapp, origem: 'site-hero', data: new Date().toISOString() })
+    });
+  } catch(_) {}
+
+  document.getElementById('form-analise').style.display = 'none';
+  document.getElementById('modal-sucesso').style.display = 'block';
+
+  setTimeout(() => {
+    const msg = encodeURIComponent(`Olá! Vim pelo site da Actus e quero uma análise do meu perfil. Meu Instagram é @${instagram}.`);
+    window.open(`https://api.whatsapp.com/send?phone=5567999001752&text=${msg}`, '_blank');
+    document.getElementById('modal-analise').style.display = 'none';
+    document.getElementById('form-analise').style.display = 'block';
+    document.getElementById('modal-sucesso').style.display = 'none';
+    btn.textContent = 'Quero minha análise gratuita →';
+    btn.disabled = false;
+    document.getElementById('form-analise').reset();
+  }, 1800);
+}
+
+document.getElementById('modal-analise').addEventListener('click', function(e) {
+  if (e.target === this) this.style.display = 'none';
+});
 </script>
 </body>
 </html>
