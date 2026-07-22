@@ -752,62 +752,44 @@
   <div class="container">
     <div class="section-header reveal">
       <div class="section-label"><i data-lucide="play-circle" style="width:11px;height:11px;"></i>Nossos Trabalhos</div>
-      <h2 class="section-title">Veja o que a Actus<br/><span class="green-text">já entregou.</span></h2>
-      <p class="section-desc">Cada produção é autêntica, focada em captar o que você sabe fazer de melhor.</p>
+      <h2 class="section-title">Cada produção conta<br/><span class="green-text">uma história real.</span></h2>
+      <p class="section-desc">Acompanhe o trabalho que entregamos para nossos clientes diretamente no nosso Instagram — onde repostamos cada produção.</p>
     </div>
-    <div class="portfolio-grid">
 
-      <!-- CARD 1 — CrossFit -->
-      <a href="https://www.instagram.com/actusmidia/" target="_blank" class="portfolio-card reveal">
-        <div class="portfolio-thumb">
-          <video autoplay muted loop playsinline preload="metadata">
-            <source src="cross%20fit.mp4" type="video/mp4">
-          </video>
-          <div class="portfolio-thumb-gradient"></div>
+    <div class="reveal" style="display:flex;justify-content:center;">
+      <a href="https://www.instagram.com/actusmidia/" target="_blank" rel="noopener"
+        style="display:flex;align-items:center;gap:20px;background:#101010;border:1px solid rgba(0,168,89,0.25);border-radius:20px;padding:32px 40px;max-width:520px;width:100%;text-decoration:none;transition:transform 0.3s,box-shadow 0.3s,border-color 0.3s;"
+        onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 0 40px rgba(0,168,89,0.15)';this.style.borderColor='rgba(0,168,89,0.5)'"
+        onmouseleave="this.style.transform='';this.style.boxShadow='';this.style.borderColor='rgba(0,168,89,0.25)'">
+        <!-- Ícone Instagram -->
+        <div style="flex-shrink:0;width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);display:flex;align-items:center;justify-content:center;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.8"/>
+            <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.8"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="white"/>
+          </svg>
         </div>
-        <div class="portfolio-info">
-          <p class="portfolio-cat">CrossFit</p>
-          <p class="portfolio-title">Reels de alta performance para esportes</p>
-          <div class="portfolio-play"><i data-lucide="play"></i></div>
+        <div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+            <!-- Ícone de repost -->
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00A859" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+            <span style="font-size:11px;color:#00A859;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;">Republicações dos clientes</span>
+          </div>
+          <p style="color:#f5f5f5;font-size:18px;font-weight:700;margin-bottom:4px;">@actusmidia</p>
+          <p style="color:#a8a8a8;font-size:13px;line-height:1.5;">Veja as produções que entregamos — repostadas direto no nosso perfil.</p>
         </div>
-      </a>
-
-      <!-- CARD 2 — Estética -->
-      <a href="https://www.instagram.com/actusmidia/" target="_blank" class="portfolio-card reveal" style="transition-delay:0.1s;">
-        <div class="portfolio-thumb">
-          <video autoplay muted loop playsinline preload="metadata">
-            <source src="est%C3%A9tica.mp4" type="video/mp4">
-          </video>
-          <div class="portfolio-thumb-gradient"></div>
+        <div style="margin-left:auto;flex-shrink:0;">
+          <i data-lucide="arrow-up-right" style="width:20px;height:20px;color:#00A859;"></i>
         </div>
-        <div class="portfolio-info">
-          <p class="portfolio-cat">Estética</p>
-          <p class="portfolio-title">Conteúdo orgânico que evidencia sua arte</p>
-          <div class="portfolio-play"><i data-lucide="play"></i></div>
-        </div>
-      </a>
-
-      <!-- CARD 3 — Bem-Estar -->
-      <a href="https://www.instagram.com/actusmidia/" target="_blank" class="portfolio-card reveal" style="transition-delay:0.2s;">
-        <div class="portfolio-thumb">
-          <video autoplay muted loop playsinline preload="metadata">
-            <source src="bem%20estar.mp4" type="video/mp4">
-          </video>
-          <div class="portfolio-thumb-gradient"></div>
-        </div>
-        <div class="portfolio-info">
-          <p class="portfolio-cat">Bem-Estar</p>
-          <p class="portfolio-title">Vídeos de procedimento que viraram referência no nicho</p>
-          <div class="portfolio-play"><i data-lucide="play"></i></div>
-        </div>
-      </a>
-
-    </div>
-    <div class="portfolio-cta-row reveal">
-      <a href="https://www.instagram.com/actusmidia/" target="_blank" class="btn btn-outline">
-        <i data-lucide="arrow-up-right" style="width:15px;height:15px;"></i>Ver mais trabalhos no Instagram
       </a>
     </div>
+
+    <div class="reveal" style="text-align:center;margin-top:28px;">
+      <button onclick="document.getElementById('modal-analise').style.display='flex'" style="background:none;border:1px solid rgba(0,168,89,0.3);border-radius:99px;padding:10px 24px;color:#00A859;font-size:13px;font-weight:600;cursor:pointer;transition:all 0.2s;letter-spacing:0.03em;" onmouseenter="this.style.background='rgba(0,168,89,0.08)'" onmouseleave="this.style.background='none'">
+        Quero uma análise do meu perfil →
+      </button>
+    </div>
+
   </div>
 </section>
 
