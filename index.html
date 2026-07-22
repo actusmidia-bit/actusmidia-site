@@ -1376,9 +1376,23 @@
           <input type="text" id="lead-instagram" required placeholder="seuperfil" style="width:100%;background:#181818;border:1px solid #3a3a3a;border-radius:10px;padding:12px 14px 12px 28px;color:#f5f5f5;font-size:15px;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(0,168,89,0.6)'" onblur="this.style.borderColor='#3a3a3a'"/>
         </div>
       </div>
-      <div style="margin-bottom:24px;">
+      <div style="margin-bottom:16px;">
         <label style="display:block;font-size:12px;color:#a8a8a8;font-weight:500;margin-bottom:6px;letter-spacing:0.04em;">WHATSAPP</label>
         <input type="tel" id="lead-whatsapp" required placeholder="(67) 99999-9999" style="width:100%;background:#181818;border:1px solid #3a3a3a;border-radius:10px;padding:12px 14px;color:#f5f5f5;font-size:15px;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='rgba(0,168,89,0.6)'" onblur="this.style.borderColor='#3a3a3a'"/>
+      </div>
+      <div style="margin-bottom:24px;">
+        <label style="display:block;font-size:12px;color:#a8a8a8;font-weight:500;margin-bottom:6px;letter-spacing:0.04em;">ÁREA DE ATUAÇÃO</label>
+        <select id="lead-area" required style="width:100%;background:#181818;border:1px solid #3a3a3a;border-radius:10px;padding:12px 14px;color:#f5f5f5;font-size:15px;outline:none;transition:border-color 0.2s;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='rgba(0,168,89,0.6)'" onblur="this.style.borderColor='#3a3a3a'">
+          <option value="" disabled selected style="color:#a8a8a8;">Selecione sua profissão</option>
+          <option value="Biomédica">Biomédica</option>
+          <option value="Enfermeira">Enfermeira</option>
+          <option value="Médica">Médica</option>
+          <option value="Dentista">Dentista</option>
+          <option value="Esteticista">Esteticista</option>
+          <option value="Fisioterapeuta">Fisioterapeuta</option>
+          <option value="Nutricionista">Nutricionista</option>
+          <option value="Outro">Outro</option>
+        </select>
       </div>
       <button type="submit" id="btn-enviar-analise" style="width:100%;background:linear-gradient(135deg,#00A859,#00d46e);border:none;border-radius:10px;padding:14px;color:#050507;font-size:15px;font-weight:700;cursor:pointer;letter-spacing:0.02em;transition:opacity 0.2s;">
         Quero minha análise gratuita →
@@ -1401,6 +1415,7 @@ async function enviarAnalise(e) {
   const nome      = document.getElementById('lead-nome').value.trim();
   const instagram = document.getElementById('lead-instagram').value.trim().replace(/^@/, '');
   const whatsapp  = document.getElementById('lead-whatsapp').value.trim();
+  const area      = document.getElementById('lead-area').value;
   const btn       = document.getElementById('btn-enviar-analise');
 
   btn.textContent = 'Enviando...';
@@ -1411,7 +1426,7 @@ async function enviarAnalise(e) {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ nome, instagram, whatsapp, origem: 'site-hero', data: new Date().toISOString() })
+      body: JSON.stringify({ nome, instagram, whatsapp, area, origem: 'site-hero', data: new Date().toISOString() })
     });
   } catch(_) {}
 
@@ -1419,7 +1434,7 @@ async function enviarAnalise(e) {
   document.getElementById('modal-sucesso').style.display = 'block';
 
   setTimeout(() => {
-    const msg = encodeURIComponent(`Olá! Vim pelo site da Actus e quero uma análise do meu perfil. Meu Instagram é @${instagram}.`);
+    const msg = encodeURIComponent(`Olá! Vim pelo site da Actus e quero uma análise do meu perfil. Sou ${area} e meu Instagram é @${instagram}.`);
     window.open(`https://api.whatsapp.com/send?phone=5567999001752&text=${msg}`, '_blank');
     document.getElementById('modal-analise').style.display = 'none';
     document.getElementById('form-analise').style.display = 'block';
