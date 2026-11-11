@@ -38,7 +38,7 @@
     "description": "Agência especializada em posicionamento, produção mobile-first e autoridade digital para profissionais de harmonização facial em Campo Grande, MS.",
     "url": "https://www.actusmidia.com.br",
     "email": "actusmidia@gmail.com",
-    "telephone": "+5567999001752",
+    "telephone": "+5567996119356",
     "address": { "@type": "PostalAddress", "addressLocality": "Campo Grande", "addressRegion": "MS", "addressCountry": "BR" },
     "areaServed": "Campo Grande, MS",
     "serviceType": ["Posicionamento de Marca", "Produção de Conteúdo Mobile-First", "Autoridade Digital", "Gestão de Presença Digital"],
@@ -176,19 +176,8 @@
     .hero-stat-label { font-size:12px; color:var(--white-3); font-weight:500; }
 
     /* ── MARQUEE ── */
-    .marquee-section { padding:18px 0; background:var(--black-2); border-top:1px solid rgba(255,255,255,0.04); border-bottom:1px solid rgba(255,255,255,0.04); overflow:hidden; }
-    .marquee-track { display:flex; align-items:center; animation:marquee 26s linear infinite; width:max-content; }
-    .marquee-track:hover { animation-play-state:paused; }
-    .marquee-item { display:flex; align-items:center; gap:10px; padding:0 30px; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--white-3); white-space:nowrap; }
-    .marquee-dot { width:4px; height:4px; background:var(--green); border-radius:50%; opacity:0.7; }
 
     /* ── CLIENTES ── */
-    #clientes { padding:80px 0; background:var(--black); }
-    .clientes-label { text-align:center; font-size:12px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--white-4); margin-bottom:32px; }
-    .clientes-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
-    .cliente-chip { display:flex; align-items:center; gap:8px; padding:10px 18px; background:var(--black-3); border:1px solid rgba(255,255,255,0.07); border-radius:100px; font-size:13px; font-weight:500; color:var(--white-2); transition:var(--transition); }
-    .cliente-chip:hover { border-color:var(--green-border); color:var(--white); background:var(--black-4); }
-    .cliente-chip svg { width:14px; height:14px; color:var(--green); }
 
     /* ── SECTION SHARED ── */
     .section-header { text-align:center; margin-bottom:56px; }
@@ -203,33 +192,13 @@
     .service-card::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 0% 0%,rgba(0,168,89,0.07) 0%,transparent 55%); opacity:0; transition:opacity 0.4s ease; }
     .service-card:hover { border-color:var(--green-border); transform:translateY(-5px); box-shadow:var(--glow-card); }
     .service-card:hover::before { opacity:1; }
-    .service-card-num { position:absolute; top:22px; right:26px; font-family:var(--font-head); font-size:54px; font-weight:900; color:rgba(255,255,255,0.025); letter-spacing:-0.05em; line-height:1; }
     .service-icon { width:50px; height:50px; background:var(--green-subtle); border:1px solid var(--green-border); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center; margin-bottom:22px; transition:var(--transition); }
     .service-card:hover .service-icon { background:rgba(0,168,89,0.16); box-shadow:0 0 20px rgba(0,168,89,0.25); }
     .service-icon svg { width:22px; height:22px; color:var(--green); }
     .service-title { font-family:var(--font-head); font-size:19px; font-weight:800; letter-spacing:-0.02em; margin-bottom:10px; }
     .service-desc { font-size:14px; color:var(--white-3); line-height:1.7; margin-bottom:22px; }
-    .service-tags { display:flex; flex-wrap:wrap; gap:7px; }
-    .tag { font-size:11px; font-weight:600; letter-spacing:0.06em; color:var(--green); background:var(--green-subtle); border:1px solid var(--green-border); padding:4px 10px; border-radius:100px; }
 
     /* ── PORTFOLIO ── */
-    #portfolio { padding:100px 0; background:var(--black-2); }
-    .portfolio-grid { display:grid; grid-template-columns:1fr; gap:20px; margin-top:48px; }
-    @media(min-width:640px) { .portfolio-grid { grid-template-columns:repeat(2,1fr); } }
-    @media(min-width:1024px) { .portfolio-grid { grid-template-columns:repeat(3,1fr); } }
-    .portfolio-card { position:relative; border-radius:var(--radius-lg); overflow:hidden; background:var(--black-3); border:1px solid rgba(255,255,255,0.06); aspect-ratio:9/16; display:flex; align-items:flex-end; transition:var(--transition); cursor:pointer; }
-    .portfolio-card:hover { transform:translateY(-4px); box-shadow:var(--glow-card); border-color:var(--green-border); }
-    .portfolio-card:hover .portfolio-play { background:var(--green); color:var(--black); transform:scale(1.1); }
-    .portfolio-thumb { position:absolute; inset:0; background:var(--black-4); overflow:hidden; }
-    .portfolio-thumb video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top; display:block; transition:transform 0.6s ease; }
-    .portfolio-card:hover .portfolio-thumb video { transform:scale(1.04); }
-    .portfolio-thumb-gradient { position:absolute; inset:0; background:linear-gradient(to top, rgba(5,5,7,0.95) 0%, rgba(5,5,7,0.35) 55%, transparent 100%); z-index:1; }
-    .portfolio-info { position:relative; z-index:2; padding:20px 18px; width:100%; }
-    .portfolio-cat { font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--green); margin-bottom:6px; }
-    .portfolio-title { font-size:14px; font-weight:700; color:var(--white); line-height:1.4; margin-bottom:10px; }
-    .portfolio-play { width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.12); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; color:var(--white); transition:var(--transition); border:1px solid rgba(255,255,255,0.2); }
-    .portfolio-play svg { width:16px; height:16px; margin-left:2px; }
-    .portfolio-cta-row { display:flex; justify-content:center; margin-top:40px; }
 
     /* ── DEPOIMENTOS ── */
     #depoimentos { padding:100px 0; background:var(--black); }
@@ -323,19 +292,8 @@
     .diag-submit svg { width:18px; height:18px; }
 
     /* ── DIFERENCIAL ── */
-    #diferencial { padding:100px 0; background:var(--black-2); position:relative; overflow:hidden; }
-    #diferencial::before { content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:800px; height:500px; background:radial-gradient(ellipse,rgba(0,168,89,0.06) 0%,transparent 65%); pointer-events:none; }
-    .diferencial-inner { display:flex; flex-direction:column; align-items:center; gap:56px; text-align:center; }
-    .diferencial-content { max-width:640px; }
-    .diferencial-content h2 { font-family:var(--font-head); font-size:clamp(26px,4vw,42px); font-weight:900; letter-spacing:-0.03em; line-height:1.15; margin-bottom:16px; }
-    .diferencial-content p { font-size:16px; color:var(--white-3); line-height:1.75; max-width:540px; margin:0 auto; }
-    .diferencial-video-wrap { width:100%; max-width:420px; aspect-ratio:9/16; border-radius:var(--radius-lg); overflow:hidden; position:relative; background:var(--black-3); border:1px solid var(--green-border); box-shadow:var(--glow-card); }
-    .diferencial-video-wrap video { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
 
     /* ── SECTION BRIDGE (separador serviços → processo) ── */
-    .section-bridge { display:flex; align-items:center; gap:20px; margin:72px 0 56px; }
-    .section-bridge-line { flex:1; height:1px; background:linear-gradient(90deg, transparent, rgba(0,168,89,0.25), transparent); }
-    .section-bridge-label { display:inline-flex; align-items:center; gap:8px; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--green); white-space:nowrap; padding:8px 18px; border:1px solid var(--green-border); border-radius:100px; background:var(--green-subtle); }
 
     /* ── PROCESSO (fluxograma dentro de #servicos) ── */
     .process-steps { display:grid; grid-template-columns:1fr; gap:1px; background:rgba(255,255,255,0.04); border-radius:var(--radius-lg); overflow:hidden; border:1px solid rgba(255,255,255,0.05); }
@@ -371,13 +329,6 @@
     .sobre-story h2 { font-family:var(--font-head); font-size:clamp(26px,4vw,42px); font-weight:900; letter-spacing:-0.03em; line-height:1.15; margin-bottom:20px; }
     .sobre-story p { font-size:15px; color:rgba(255,255,255,0.82); line-height:1.85; margin-bottom:16px; max-width:600px; }
     .sobre-story p strong { color:var(--white); font-weight:600; }
-    .sobre-pillars { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:32px; }
-    .pillar { display:flex; align-items:flex-start; gap:12px; padding:16px; background:var(--black-3); border:1px solid rgba(255,255,255,0.06); border-radius:var(--radius-md); transition:var(--transition); }
-    .pillar:hover { border-color:var(--green-border); background:var(--black-4); }
-    .pillar-icon { width:32px; height:32px; background:var(--green-subtle); border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-    .pillar-icon svg { width:16px; height:16px; color:var(--green); }
-    .pillar-text strong { font-size:13px; font-weight:700; color:var(--white); display:block; margin-bottom:2px; }
-    .pillar-text span { font-size:11px; color:var(--white-3); line-height:1.5; }
     .team-heading { font-family:var(--font-head); font-size:18px; font-weight:800; letter-spacing:-0.01em; margin-bottom:24px; color:var(--white-2); }
     .team-grid { display:grid; grid-template-columns:1fr; gap:20px; }
     .team-card { background:var(--black-3); border:1px solid rgba(255,255,255,0.07); border-radius:var(--radius-lg); overflow:hidden; transition:var(--transition); }
@@ -436,7 +387,6 @@
     @keyframes pulse-wa { 0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.4),0 0 0 0 rgba(37,211,102,0.4)} 50%{box-shadow:0 4px 20px rgba(37,211,102,0.4),0 0 0 12px rgba(37,211,102,0)} }
     @keyframes pulse-record { 0%,100%{opacity:1} 50%{opacity:0.5} }
     @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
-    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
     .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.6s ease,transform 0.6s ease; }
     .reveal.visible { opacity:1; transform:translateY(0); }
 
@@ -451,7 +401,6 @@
     }
     @media(min-width:1024px){
       .services-grid      { grid-template-columns:repeat(4,1fr); }
-      .diferencial-inner  { gap:64px; }
       .process-steps      { grid-template-columns:repeat(4,1fr); }
       .footer-grid        { grid-template-columns:2fr 1fr 1fr 1fr; }
       .footer-bottom      { flex-direction:row; justify-content:space-between; text-align:left; }
@@ -489,7 +438,6 @@
     .hero-title, .section-title, .service-title,
     .team-heading, .cta-inner h2, .sobre-story h2, .diferencial-content h2,
     .mf-intro h2, .diag-header h3, .mf-matrix-title h3,
-    .service-card-num, .logo-text { font-style:italic; }
 
     /* ── BODY FONT (legibilidade em parágrafos longos) ── */
     p, li, input, select, textarea, .dep-text, .service-desc, .section-desc,
@@ -558,26 +506,34 @@
     .planos-nota a { color:var(--green); text-decoration:none; }
 
     /* ── CARD PROJETOS ── */
-    .plano-projeto { grid-column:1/-1; padding:44px 48px; background:linear-gradient(125deg,rgba(0,45,87,0.7) 0%,var(--black-3) 40%,rgba(0,168,89,0.08) 100%); border:1px solid var(--blue-border); box-shadow:0 0 0 1px rgba(0,168,89,0.08),0 30px 80px rgba(0,0,0,0.5),0 0 60px rgba(0,168,89,0.06); position:relative; overflow:hidden; }
-    .plano-projeto::before { content:''; position:absolute; top:-80px; right:-80px; width:380px; height:380px; background:radial-gradient(circle,rgba(0,100,180,0.2) 0%,transparent 65%); pointer-events:none; z-index:0; }
-    .plano-projeto::after { content:'PROJETOS'; position:absolute; bottom:-28px; right:32px; font-family:var(--font-head); font-size:100px; font-weight:900; color:rgba(0,168,89,0.04); letter-spacing:0.04em; pointer-events:none; z-index:0; line-height:1; }
-    .plano-projeto > * { position:relative; z-index:1; }
-    .plano-projeto .plano-badge { background:linear-gradient(135deg,var(--blue-mid),var(--blue)); color:#fff; top:-13px; left:32px; transform:none; border:1px solid var(--blue-border); }
-    .plano-projeto-inner { display:flex; flex-direction:column; gap:36px; }
-    @media(min-width:900px) { .plano-projeto-inner { flex-direction:row; align-items:center; gap:56px; } }
-    .plano-projeto-head { flex-shrink:0; min-width:240px; }
-    .plano-projeto-icon { width:60px; height:60px; background:var(--gradient-green); border-radius:18px; display:flex; align-items:center; justify-content:center; margin-bottom:22px; box-shadow:0 0 30px rgba(0,168,89,0.4); }
-    .plano-projeto-icon svg { width:26px; height:26px; color:var(--black); }
-    .plano-projeto-head .plano-nome { font-size:30px; letter-spacing:0.06em; }
-    .plano-projeto-head .plano-sub { font-size:13px; color:var(--white-3); line-height:1.65; max-width:280px; margin-top:8px; }
-    .plano-projeto-feats { flex:1; display:grid; grid-template-columns:1fr; gap:11px; list-style:none; margin-bottom:0; }
-    @media(min-width:600px) { .plano-projeto-feats { grid-template-columns:1fr 1fr; gap:11px 36px; } }
-    .plano-projeto-cta-wrap { flex-shrink:0; display:flex; flex-direction:column; align-items:center; gap:6px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:var(--radius-lg); padding:32px 36px; text-align:center; }
-    .plano-projeto-price { font-family:'Segoe UI', -apple-system, sans-serif; font-size:26px; font-weight:800; color:var(--white); letter-spacing:0.02em; font-style:normal; }
-    .plano-projeto-price-note { font-size:11px; color:var(--white-3); line-height:1.5; margin-bottom:12px; }
-    .plano-cta-projeto { display:flex; align-items:center; justify-content:center; gap:9px; background:var(--gradient-green); color:var(--black); padding:16px 32px; border-radius:100px; font-size:15px; font-weight:700; text-decoration:none; transition:var(--transition); font-family:var(--font-body); white-space:nowrap; box-shadow:0 0 30px rgba(0,168,89,0.3); letter-spacing:0.01em; }
-    .plano-cta-projeto:hover { box-shadow:0 0 55px rgba(0,168,89,0.55); transform:translateY(-2px); }
-    .plano-cta-projeto svg { width:16px; height:16px; }
+
+    .dep-ig { display:flex; align-items:center; justify-content:center; gap:8px; border:1px solid var(--green-border); color:var(--green); background:var(--green-subtle); padding:12px 16px; border-radius:100px; font-size:13px; font-weight:600; text-decoration:none; transition:var(--transition); }
+    .dep-ig:hover { background:rgba(0,168,89,0.16); box-shadow:0 0 20px rgba(0,168,89,0.25); }
+
+    /* ── PLANOS POR FASE ── */
+    .plano-fase { font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green); margin-bottom:8px; }
+    .plano-nome-fase { font-size:20px; letter-spacing:0; line-height:1.25; text-transform:none; }
+    .plano-aviso { font-size:12px; color:var(--white-3); margin:-8px 0 16px; }
+
+    /* ── PROJETOS ── */
+    #projetos { padding:100px 0; background:var(--black); }
+    .proj-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; max-width:900px; margin:0 auto; }
+    @media(min-width:768px){ .proj-grid { grid-template-columns:repeat(5,1fr); } }
+    .proj-item { display:flex; flex-direction:column; align-items:center; gap:10px; text-align:center; padding:22px 12px; background:var(--black-3); border:1px solid rgba(255,255,255,0.07); border-radius:var(--radius-md); font-size:13px; font-weight:600; color:var(--white-2); transition:var(--transition); }
+    .proj-item:hover { border-color:var(--green-border); box-shadow:var(--glow-card); }
+    .proj-item svg { width:22px; height:22px; color:var(--green); }
+    .proj-cta { display:flex; flex-direction:column; align-items:center; gap:14px; margin-top:40px; }
+    .proj-price { font-family:'Segoe UI', -apple-system, sans-serif; font-size:24px; font-weight:800; color:var(--white); }
+
+    /* ── COMO FUNCIONA (curiosidade) ── */
+    #processo-sec { padding:0 0 80px; background:var(--black); }
+    .processo-details { max-width:960px; margin:0 auto; border:1px solid rgba(255,255,255,0.07); border-radius:var(--radius-lg); background:var(--black-3); padding:0 24px; }
+    .processo-details summary { list-style:none; cursor:pointer; display:flex; align-items:center; gap:10px; padding:18px 0; font-size:14px; font-weight:600; color:var(--white-2); }
+    .processo-details summary::-webkit-details-marker { display:none; }
+    .processo-details summary svg { color:var(--green); }
+    .processo-chevron { margin-left:auto; transition:transform 0.3s; }
+    .processo-details[open] .processo-chevron { transform:rotate(180deg); }
+    .processo-details .workflow-flow { margin:0 0 24px; }
 
   </style>
 </head>
@@ -625,10 +581,9 @@
       </svg>
     </a>
     <ul class="nav-links">
-      <li><a href="#portfolio">Trabalhos</a></li>
-      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#depoimentos">Resultados</a></li>
       <li><a href="#planos">Planos</a></li>
-      <li><a href="#processo">Como Funciona</a></li>
+      <li><a href="#projetos">Projetos</a></li>
       <li><a href="#sobre">Sobre</a></li>
     </ul>
     <div class="nav-actions">
@@ -641,17 +596,16 @@
 </header>
 
 <nav class="mobile-menu" id="mobileMenu">
-  <a href="#portfolio"   class="mobile-link">Trabalhos</a>
-  <a href="#servicos"    class="mobile-link">Serviços</a>
+  <a href="#depoimentos" class="mobile-link">Resultados</a>
   <a href="#planos"      class="mobile-link">Planos</a>
-  <a href="#processo"    class="mobile-link">Como Funciona</a>
+  <a href="#projetos"    class="mobile-link">Projetos</a>
   <a href="#sobre"       class="mobile-link">Sobre</a>
   <a href="#cta"         class="mobile-link">Contato</a>
   <div class="mobile-menu-footer">
     <a href="https://www.instagram.com/actusmidia/" target="_blank" class="btn btn-outline" style="font-size:13px;">
       <i data-lucide="instagram" style="width:14px;height:14px;"></i>Instagram
     </a>
-    <a href="https://api.whatsapp.com/send?phone=5567999001752" target="_blank" class="btn btn-primary" style="font-size:13px;">
+    <a href="https://api.whatsapp.com/send?phone=5567996119356" target="_blank" class="btn btn-primary" style="font-size:13px;">
       <i data-lucide="message-circle" style="width:14px;height:14px;"></i>WhatsApp
     </a>
   </div>
@@ -664,126 +618,22 @@
   <img src="ID Visual/elemento-tipografia.svg" alt="" aria-hidden="true" class="brand-element" style="position:absolute;width:700px;left:50%;bottom:-40px;transform:translateX(-50%);opacity:0.03;pointer-events:none;" />
   <div class="container">
     <div class="hero-content">
-      <div class="hero-badge"><span class="hero-badge-dot"></span>Agência Mobile-First para Harmonização Facial · Campo Grande, MS</div>
+      <div class="hero-badge"><span class="hero-badge-dot"></span>Agência para Harmonização Facial · Campo Grande, MS</div>
       <h1 class="hero-title">
-        Onde se desenvolvem as próximas<br/>referências da <em>HOF.</em>
+        Onde se desenvolvem as próximas referências da <em>HOF.</em>
       </h1>
       <p class="hero-subtitle">
-        Transformamos conhecimento clínico em posicionamento, conteúdo e autoridade — para que especialistas sejam mais reconhecidos, valorizados e escolhidos.
+        Transformamos conhecimento clínico em posicionamento, conteúdo e autoridade — para que você seja mais reconhecido, valorizado e escolhido.
       </p>
       <div class="hero-cta">
-        <button onclick="document.getElementById('modal-analise').style.display='flex'" class="btn btn-primary">
-          <i data-lucide="zap" style="width:16px;height:16px;"></i>Solicitar diagnóstico estratégico
-        </button>
-        <a href="#portfolio" class="btn btn-outline">
-          Ver nossos trabalhos<i data-lucide="arrow-down" style="width:14px;height:14px;"></i>
+        <a href="#planos" class="btn btn-primary">
+          <i data-lucide="layers" style="width:16px;height:16px;"></i>Ver planos
+        </a>
+        <a href="#projetos" class="btn btn-outline">
+          Prefere um projeto?<i data-lucide="arrow-down" style="width:14px;height:14px;"></i>
         </a>
       </div>
-      <p class="hero-location"><i data-lucide="map-pin"></i>Campo Grande, MS</p>
     </div>
-  </div>
-</section>
-
-<!-- ══════ MARQUEE ══════ -->
-<div class="marquee-section">
-  <div class="marquee-track">
-    <div class="marquee-item"><span class="marquee-dot"></span>Posicionamento Especializado</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Autoridade Clínica</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Sem Parar Sua Rotina</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Demanda Qualificada</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Direção Estratégica</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Conteúdo que Converte</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Percepção de Valor</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Acompanhamento de Resultados</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Tecnologia a Serviço da sua Autoridade</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Posicionamento Especializado</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Autoridade Clínica</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Sem Parar Sua Rotina</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Demanda Qualificada</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Direção Estratégica</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Conteúdo que Converte</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Percepção de Valor</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Acompanhamento de Resultados</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Tecnologia a Serviço da sua Autoridade</div>
-  </div>
-</div>
-
-<!-- ══════ CLIENTES / NICHOS ══════ -->
-<section id="clientes">
-  <div class="container">
-    <p class="clientes-label reveal">Especialistas em harmonização facial que constroem autoridade com a Actus</p>
-    <div class="clientes-grid reveal">
-      <div class="cliente-chip"><i data-lucide="sparkles"></i>Biomedicina Estética</div>
-      <div class="cliente-chip"><i data-lucide="heart"></i>Enfermagem Estética</div>
-      <div class="cliente-chip"><i data-lucide="stethoscope"></i>Medicina Estética</div>
-      <div class="cliente-chip"><i data-lucide="smile"></i>Odontologia Estética</div>
-      <div class="cliente-chip"><i data-lucide="graduation-cap"></i>Educação em Saúde</div>
-      <div class="cliente-chip"><i data-lucide="user"></i>Personal Brands HOF</div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════ DIFERENCIAL ══════ -->
-<section id="diferencial">
-  <div class="container">
-    <div class="diferencial-inner">
-      <div class="diferencial-content reveal">
-        <div class="section-label"><i data-lucide="star" style="width:11px;height:11px;"></i>Nosso Diferencial</div>
-        <h2>Autoridade clínica<br/>que o paciente <em>sente.</em></h2>
-        <p>Entender tão profundamente o negócio do harmonizador, o comportamento do paciente e o processo comercial da clínica — e transformar esse conhecimento em <strong style="color:var(--white);">percepção de valor, demanda qualificada e crescimento.</strong></p>
-      </div>
-      <div class="diferencial-video-wrap reveal">
-        <video autoplay muted loop playsinline preload="metadata">
-          <source src="est%C3%A9tica.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════ PORTFOLIO ══════ -->
-<section id="portfolio">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label"><i data-lucide="play-circle" style="width:11px;height:11px;"></i>Nossos Trabalhos</div>
-      <h2 class="section-title">Cada produção conta<br/><span class="green-text">uma história real.</span></h2>
-      <p class="section-desc">Acompanhe o trabalho que entregamos para nossos clientes diretamente no nosso Instagram — onde repostamos cada produção.</p>
-    </div>
-
-    <div class="reveal" style="display:flex;justify-content:center;">
-      <a href="https://www.instagram.com/actusmidia/" target="_blank" rel="noopener"
-        style="display:flex;align-items:center;gap:20px;background:#101010;border:1px solid rgba(0,168,89,0.25);border-radius:20px;padding:32px 40px;max-width:520px;width:100%;text-decoration:none;transition:transform 0.3s,box-shadow 0.3s,border-color 0.3s;"
-        onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 0 40px rgba(0,168,89,0.15)';this.style.borderColor='rgba(0,168,89,0.5)'"
-        onmouseleave="this.style.transform='';this.style.boxShadow='';this.style.borderColor='rgba(0,168,89,0.25)'">
-        <!-- Ícone Instagram -->
-        <div style="flex-shrink:0;width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);display:flex;align-items:center;justify-content:center;">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.8"/>
-            <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.8"/>
-            <circle cx="17.5" cy="6.5" r="1" fill="white"/>
-          </svg>
-        </div>
-        <div>
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
-            <!-- Ícone de repost -->
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00A859" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
-            <span style="font-size:11px;color:#00A859;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;">Republicações dos clientes</span>
-          </div>
-          <p style="color:#f5f5f5;font-size:18px;font-weight:700;margin-bottom:4px;">@actusmidia</p>
-          <p style="color:#a8a8a8;font-size:13px;line-height:1.5;">Veja as produções que entregamos — repostadas direto no nosso perfil.</p>
-        </div>
-        <div style="margin-left:auto;flex-shrink:0;">
-          <i data-lucide="arrow-up-right" style="width:20px;height:20px;color:#00A859;"></i>
-        </div>
-      </a>
-    </div>
-
-    <div class="reveal" style="text-align:center;margin-top:28px;">
-      <button onclick="document.getElementById('modal-analise').style.display='flex'" style="background:none;border:1px solid rgba(0,168,89,0.3);border-radius:99px;padding:10px 24px;color:#00A859;font-size:13px;font-weight:600;cursor:pointer;transition:all 0.2s;letter-spacing:0.03em;" onmouseenter="this.style.background='rgba(0,168,89,0.08)'" onmouseleave="this.style.background='none'">
-        Quero uma análise do meu perfil →
-      </button>
-    </div>
-
   </div>
 </section>
 
@@ -803,19 +653,9 @@
           <iframe src="https://www.youtube.com/embed/snP97nhtChk" title="Depoimento Dra. Mariana Leite" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border-radius:0;"></iframe>
         </div>
         <div style="padding:20px 22px 22px;">
-          <div style="display:inline-block;background:rgba(0,168,89,0.12);border:1px solid rgba(0,168,89,0.25);border-radius:99px;padding:3px 10px;font-size:11px;color:#00A859;font-weight:600;letter-spacing:0.05em;margin-bottom:10px;">BIOMÉDICA ESTETA</div>
-          <p style="color:#f5f5f5;font-size:15px;font-weight:600;line-height:1.35;margin-bottom:4px;">Dra. Mariana Leite</p>
-          <p style="color:#a8a8a8;font-size:13px;line-height:1.5;margin-bottom:14px;">Uma estratégia completa para fortalecer a marca e gerar desejo.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:8px;border-top:1px solid rgba(255,255,255,0.06);padding-top:14px;">
-            <div style="background:rgba(0,168,89,0.08);border:1px solid rgba(0,168,89,0.18);border-radius:8px;padding:8px 12px;flex:1;min-width:110px;">
-              <p style="font-size:16px;font-weight:800;color:#00A859;line-height:1;margin-bottom:3px;">61 mil</p>
-              <p style="font-size:10px;color:#777;letter-spacing:0.04em;text-transform:uppercase;">views/mês (pico)</p>
-            </div>
-            <div style="background:rgba(0,168,89,0.08);border:1px solid rgba(0,168,89,0.18);border-radius:8px;padding:8px 12px;flex:1;min-width:110px;">
-              <p style="font-size:16px;font-weight:800;color:#00A859;line-height:1;margin-bottom:3px;">3 projetos</p>
-              <p style="font-size:10px;color:#777;letter-spacing:0.04em;text-transform:uppercase;">Mentoria · Day Clinic · Curso HOF</p>
-            </div>
-          </div>
+          <p style="color:#f5f5f5;font-size:16px;font-weight:700;line-height:1.3;margin-bottom:2px;">Dra. Mariana Leite</p>
+          <p style="color:#a8a8a8;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:16px;">BIOMÉDICA ESTETA</p>
+          <a href="https://www.instagram.com/dramarileite/" target="_blank" rel="noopener" class="dep-ig">Ver o Instagram de @dramarileite<i data-lucide="arrow-up-right" style="width:15px;height:15px;"></i></a>
         </div>
       </div>
 
@@ -825,19 +665,9 @@
           <iframe src="https://www.youtube.com/embed/jt9k79qNDIg" title="Depoimento Dr. Marcelo Belon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border-radius:0;"></iframe>
         </div>
         <div style="padding:20px 22px 22px;">
-          <div style="display:inline-block;background:rgba(0,168,89,0.12);border:1px solid rgba(0,168,89,0.25);border-radius:99px;padding:3px 10px;font-size:11px;color:#00A859;font-weight:600;letter-spacing:0.05em;margin-bottom:10px;">HARMONIZAÇÃO OROFACIAL</div>
-          <p style="color:#f5f5f5;font-size:15px;font-weight:600;line-height:1.35;margin-bottom:4px;">Dr. Marcelo Belon</p>
-          <p style="color:#a8a8a8;font-size:13px;line-height:1.5;margin-bottom:14px;">De 2 mil para 24 mil seguidores — e 2 Masterclasses geradas em 7 meses.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:8px;border-top:1px solid rgba(255,255,255,0.06);padding-top:14px;">
-            <div style="background:rgba(0,168,89,0.08);border:1px solid rgba(0,168,89,0.18);border-radius:8px;padding:8px 12px;flex:1;min-width:110px;">
-              <p style="font-size:16px;font-weight:800;color:#00A859;line-height:1;margin-bottom:3px;">+1.000%</p>
-              <p style="font-size:10px;color:#777;letter-spacing:0.04em;text-transform:uppercase;">seguidores em 7 meses</p>
-            </div>
-            <div style="background:rgba(0,168,89,0.08);border:1px solid rgba(0,168,89,0.18);border-radius:8px;padding:8px 12px;flex:1;min-width:110px;">
-              <p style="font-size:16px;font-weight:800;color:#00A859;line-height:1;margin-bottom:3px;">2M+ views</p>
-              <p style="font-size:10px;color:#777;letter-spacing:0.04em;text-transform:uppercase;">em 90 dias</p>
-            </div>
-          </div>
+          <p style="color:#f5f5f5;font-size:16px;font-weight:700;line-height:1.3;margin-bottom:2px;">Dr. Marcelo Belon</p>
+          <p style="color:#a8a8a8;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:16px;">HARMONIZAÇÃO OROFACIAL</p>
+          <a href="https://www.instagram.com/drmarcelobelon/" target="_blank" rel="noopener" class="dep-ig">Ver o Instagram de @drmarcelobelon<i data-lucide="arrow-up-right" style="width:15px;height:15px;"></i></a>
         </div>
       </div>
 
@@ -846,118 +676,178 @@
   </div>
 </section>
 
-<!-- ══════ SERVICES + PROCESSO ══════ -->
+<!-- ══════ MÉTODO ══════ -->
 <section id="servicos">
   <div class="container">
-
-    <!-- Cabeçalho unificado -->
     <div class="section-header reveal">
       <div class="section-label"><i data-lucide="grid" style="width:11px;height:11px;"></i>Método Actus</div>
       <h2 class="section-title">Da autoridade clínica<br/><span class="green-text">ao crescimento da marca.</span></h2>
-      <p class="section-desc">A Actus constrói marcas fortes para profissionais da harmonização facial. Unimos estratégia, produção mobile-first, presença digital e acompanhamento de resultados para transformar conhecimento clínico em autoridade, autoridade em percepção de valor e percepção de valor em novas oportunidades de crescimento.</p>
     </div>
-
-    <!-- Cards de serviços -->
     <div class="services-grid">
       <div class="service-card reveal">
-        <span class="service-card-num">01</span>
         <div class="service-icon"><i data-lucide="compass"></i></div>
         <h3 class="service-title">Estratégia</h3>
-        <p class="service-desc">Construímos a base para que sua marca seja reconhecida, valorizada e lembrada. Definimos posicionamento, diferenciais, público, identidade e direção estratégica para que cada ação tenha propósito.</p>
-        <div class="service-tags"><span class="tag">Posicionamento</span><span class="tag">Branding</span><span class="tag">Planejamento</span><span class="tag">Consultoria</span></div>
+        <p class="service-desc">A gente define como você quer ser visto e o que comunicar, para que cada post tenha um motivo.</p>
       </div>
       <div class="service-card reveal" style="transition-delay:0.1s;">
-        <span class="service-card-num">02</span>
         <div class="service-icon"><i data-lucide="video"></i></div>
         <h3 class="service-title">Produção</h3>
-        <p class="service-desc">Transformamos seu conhecimento e sua experiência clínica em uma comunicação à altura do seu trabalho. Conteúdo mobile-first com direção criativa, estética high-end e linguagem que gera confiança.</p>
-        <div class="service-tags"><span class="tag">Vídeos</span><span class="tag">Retratos</span><span class="tag">Design</span><span class="tag">Apple Log</span></div>
+        <p class="service-desc">A gente grava no seu espaço, edita e entrega tudo pronto para postar. Você só cuida dos seus pacientes.</p>
       </div>
       <div class="service-card reveal" style="transition-delay:0.2s;">
-        <span class="service-card-num">03</span>
         <div class="service-icon"><i data-lucide="radio"></i></div>
         <h3 class="service-title">Distribuição</h3>
-        <p class="service-desc">Fazemos sua mensagem chegar às pessoas certas, com frequência, estratégia e consistência. Gerenciamos presença digital e potencializamos campanhas para ampliar alcance e gerar demanda qualificada.</p>
-        <div class="service-tags"><span class="tag">Social Media</span><span class="tag">Publicações</span><span class="tag">Tráfego Pago</span></div>
+        <p class="service-desc">A gente publica com regularidade para sua mensagem chegar às pessoas certas.</p>
       </div>
       <div class="service-card reveal" style="transition-delay:0.3s;">
-        <span class="service-card-num">04</span>
         <div class="service-icon"><i data-lucide="trending-up"></i></div>
         <h3 class="service-title">Crescimento</h3>
-        <p class="service-desc">Acompanhamos o que acontece depois que o conteúdo é publicado. Analisamos indicadores, comportamento da audiência e oportunidades de melhoria para otimizar continuamente a estratégia.</p>
-        <div class="service-tags"><span class="tag">Métricas</span><span class="tag">Otimizações</span><span class="tag">Reuniões</span><span class="tag">Acompanhamento</span></div>
+        <p class="service-desc">A gente acompanha o que funcionou e ajusta o que for preciso para você crescer.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- Fechamento da seção de serviços -->
-    <div class="reveal" style="margin-top:48px;padding:32px 36px;background:rgba(0,168,89,0.06);border:1px solid rgba(0,168,89,0.2);border-radius:18px;text-align:center;max-width:780px;margin-left:auto;margin-right:auto;">
-      <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:600;color:#f5f5f5;line-height:1.4;margin-bottom:0;">Não entregamos apenas conteúdo. Construímos um sistema de posicionamento, autoridade e crescimento para que profissionais da harmonização facial <span style="color:#00A859;">deixem de disputar por preço e passem a ser escolhidos pela confiança e pelo valor da sua marca.</span></p>
+<!-- ══════ PLANOS ══════ -->
+<section id="planos">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label"><i data-lucide="layers" style="width:11px;height:11px;"></i>Planos &amp; Investimento</div>
+      <h2 class="section-title">Cada fase da sua carreira<br/><span class="green-text">tem um plano.</span></h2>
+      <p class="section-desc">Escolha o que descreve o seu momento. O objetivo vem primeiro — os entregáveis são consequência.</p>
     </div>
+    <div class="planos-grid">
+      <div class="plano-card reveal">
+        <p class="plano-fase">Fase 1 · Autoridade Essencial</p>
+        <p class="plano-nome plano-nome-fase">Estou começando a me posicionar</p>
+        <p class="plano-preco">R$ 1.500<span>/mês</span></p>
+        <p class="plano-sub">Organize seu posicionamento e construa uma presença coerente.</p>
+        <div class="plano-divider"></div>
+        <ul class="plano-itens">
+          <li><i data-lucide="check-circle"></i>4h de captação no seu espaço</li>
+          <li><i data-lucide="check-circle"></i>4 vídeos de posicionamento com roteiro estratégico</li>
+          <li><i data-lucide="check-circle"></i>4 posts estáticos de autoridade</li>
+          <li><i data-lucide="check-circle"></i>Planejamento de conteúdo mensal</li>
+          <li><i data-lucide="check-circle"></i>Acompanhamento via WhatsApp</li>
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=5567996119356&text=Ol%C3%A1%2C+tenho+interesse+no+plano+Autoridade+Essencial+da+Actus!" target="_blank" class="plano-cta">
+          <i data-lucide="message-circle" style="width:15px;height:15px;"></i>Quero este plano
+        </a>
+      </div>
 
-    <!-- Separador visual -->
-    <div class="section-bridge reveal">
-      <div class="section-bridge-line"></div>
-      <div class="section-bridge-label"><i data-lucide="git-branch" style="width:13px;height:13px;"></i>Como funciona na prática</div>
-      <div class="section-bridge-line"></div>
+      <div class="plano-card destaque reveal">
+        <span class="plano-badge">Mais Popular</span>
+        <p class="plano-fase">Fase 2 · Autoridade Contínua</p>
+        <p class="plano-nome plano-nome-fase">Já tenho presença e quero constância</p>
+        <p class="plano-preco">R$ 2.100<span>/mês</span></p>
+        <p class="plano-sub">Transforme conhecimento em comunicação frequente, desejável e com confiança.</p>
+        <div class="plano-divider"></div>
+        <ul class="plano-itens">
+          <li><i data-lucide="check-circle"></i>6h de captação (2 períodos por mês)</li>
+          <li><i data-lucide="check-circle"></i>8 vídeos de posicionamento com roteiro estratégico</li>
+          <li><i data-lucide="check-circle"></i>4 posts estáticos de autoridade</li>
+          <li><i data-lucide="check-circle"></i>Otimização de conteúdo para cada rede</li>
+          <li><i data-lucide="check-circle"></i>Planejamento e calendário editorial mensal</li>
+          <li><i data-lucide="check-circle"></i>Acompanhamento via WhatsApp</li>
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=5567996119356&text=Ol%C3%A1%2C+tenho+interesse+no+plano+Autoridade+Cont%C3%ADnua+da+Actus!" target="_blank" class="plano-cta">
+          <i data-lucide="zap" style="width:15px;height:15px;"></i>Quero este plano
+        </a>
+      </div>
+
+      <div class="plano-card reveal">
+        <p class="plano-fase">Fase 3 · Crescimento Estratégico</p>
+        <p class="plano-nome plano-nome-fase">Quero que a autoridade traga pacientes</p>
+        <p class="plano-preco">R$ 2.900<span>/mês</span></p>
+        <p class="plano-sub">Integre conteúdo e análise de resultados para fazer da autoridade um canal de aquisição.</p>
+        <div class="plano-divider"></div>
+        <ul class="plano-itens">
+          <li><i data-lucide="check-circle"></i>8h de captação (4 períodos por mês)</li>
+          <li><i data-lucide="check-circle"></i>12 vídeos de posicionamento com roteiro estratégico</li>
+          <li><i data-lucide="check-circle"></i>8 posts estáticos de autoridade</li>
+          <li><i data-lucide="check-circle"></i>Planejamento e calendário editorial mensal</li>
+          <li><i data-lucide="check-circle"></i>Relatório mensal de desempenho</li>
+          <li><i data-lucide="check-circle"></i>Acompanhamento direto com os fundadores</li>
+        </ul>
+        <p class="plano-aviso">Tráfego pago não incluso neste plano.</p>
+        <a href="https://api.whatsapp.com/send?phone=5567996119356&text=Ol%C3%A1%2C+tenho+interesse+no+plano+Crescimento+Estrat%C3%A9gico+da+Actus!" target="_blank" class="plano-cta">
+          <i data-lucide="trending-up" style="width:15px;height:15px;"></i>Quero este plano
+        </a>
+      </div>
     </div>
+    <p class="planos-nota">Valores válidos até dezembro de 2026. Não sabe qual é o seu momento? <a href="https://api.whatsapp.com/send?phone=5567996119356&text=Ol%C3%A1%2C+quero+conversar+com+um+estrategista+da+Actus!" target="_blank">Converse com um estrategista.</a></p>
+  </div>
+</section>
 
-    <!-- Fluxograma -->
-    <div class="workflow-flow reveal" id="processo">
+<!-- ══════ PROJETOS ══════ -->
+<section id="projetos">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label"><i data-lucide="sparkles" style="width:11px;height:11px;"></i>Projetos</div>
+      <h2 class="section-title">Nenhum plano combina com você agora?<br/><span class="green-text">Contrate só o que precisa.</span></h2>
+      <p class="section-desc">Escopo, prazo e entrega definidos junto com você, do zero.</p>
+    </div>
+    <div class="proj-grid">
+      <div class="proj-item reveal"><i data-lucide="calendar-days"></i><span>Eventos &amp; Congressos</span></div>
+      <div class="proj-item reveal"><i data-lucide="building-2"></i><span>Vídeos Institucionais</span></div>
+      <div class="proj-item reveal"><i data-lucide="rocket"></i><span>Lançamentos</span></div>
+      <div class="proj-item reveal"><i data-lucide="film"></i><span>Mini-documentários</span></div>
+      <div class="proj-item reveal"><i data-lucide="sparkles"></i><span>Campanhas Sazonais</span></div>
+      <div class="proj-item reveal"><i data-lucide="monitor-play"></i><span>Curso Online</span></div>
+      <div class="proj-item reveal"><i data-lucide="graduation-cap"></i><span>Masterclass</span></div>
+      <div class="proj-item reveal"><i data-lucide="stethoscope"></i><span>Day Clinic</span></div>
+      <div class="proj-item reveal"><i data-lucide="youtube"></i><span>YouTube</span></div>
+      <div class="proj-item reveal"><i data-lucide="music-2"></i><span>TikTok</span></div>
+    </div>
+    <div class="proj-cta reveal">
+      <p class="proj-price">Sob consulta</p>
+      <a href="https://api.whatsapp.com/send?phone=5567996119356&text=Ol%C3%A1%2C+quero+agendar+uma+reuni%C3%A3o+para+falar+de+um+projeto+com+a+Actus!" target="_blank" class="btn btn-primary">
+        <i data-lucide="calendar"></i>Agendar reunião
+      </a>
+    </div>
+  </div>
+</section>
 
+<!-- ══════ COMO FUNCIONA (curiosidade) ══════ -->
+<section id="processo-sec">
+  <div class="container">
+    <details class="processo-details reveal" id="processo">
+      <summary><i data-lucide="git-branch" style="width:14px;height:14px;"></i>Curiosidade: como é trabalhar com a Actus<i data-lucide="chevron-down" class="processo-chevron" style="width:16px;height:16px;"></i></summary>
+      <div class="workflow-flow">
       <div class="wf-node">
         <div class="wf-node-icon"><i data-lucide="calendar-check"></i></div>
-        <div class="wf-node-body">
-          <h4>Reunião de Alinhamento</h4>
-          <p>Agendamos uma conversa antes de qualquer captação para entender objetivos, rotina e estética da sua marca.</p>
-          <span class="wf-node-badge"><i data-lucide="video" style="width:10px;height:10px;"></i>Online ou Presencial</span>
-        </div>
+        <div class="wf-node-body"><h4>Reunião de alinhamento</h4><p>Entendemos objetivos, rotina e estética da sua marca.</p></div>
       </div>
 
       <div class="wf-arrow"><i data-lucide="arrow-right"></i></div>
 
       <div class="wf-node">
         <div class="wf-node-icon"><i data-lucide="layout-dashboard"></i></div>
-        <div class="wf-node-body">
-          <h4>Planejamento no Trello</h4>
-          <p>Criamos um board exclusivo com tarefas, prazos e entregas organizados. Você acompanha tudo em tempo real.</p>
-          <span class="wf-node-badge"><i data-lucide="eye" style="width:10px;height:10px;"></i>Transparência total</span>
-        </div>
+        <div class="wf-node-body"><h4>Planejamento no Trello</h4><p>Você acompanha tarefas e prazos em tempo real.</p></div>
       </div>
 
       <div class="wf-arrow"><i data-lucide="arrow-right"></i></div>
 
       <div class="wf-node">
         <div class="wf-node-icon"><i data-lucide="video"></i></div>
-        <div class="wf-node-body">
-          <h4>Captação no Seu Espaço</h4>
-          <p>Chegamos, gravamos e vamos embora — sem parar sua operação. Cobrimos procedimentos, eventos, aulas, reuniões e bastidores.</p>
-          <span class="wf-node-badge"><i data-lucide="zap" style="width:10px;height:10px;"></i>Zero interrupção</span>
-        </div>
+        <div class="wf-node-body"><h4>Captação no seu espaço</h4><p>Gravamos sem parar a sua operação.</p></div>
       </div>
 
       <div class="wf-arrow"><i data-lucide="arrow-right"></i></div>
 
       <div class="wf-node">
         <div class="wf-node-icon"><i data-lucide="message-circle"></i></div>
-        <div class="wf-node-body">
-          <h4>Feedback via WhatsApp 24h</h4>
-          <p>Grupo exclusivo para instruções e aprovações. Garantimos até <strong>2 rodadas de ajuste</strong> para sua total satisfação.</p>
-          <span class="wf-node-badge"><i data-lucide="refresh-cw" style="width:10px;height:10px;"></i>Até 2 devoluções</span>
-        </div>
+        <div class="wf-node-body"><h4>Aprovação por WhatsApp</h4><p>Até 2 rodadas de ajuste.</p></div>
       </div>
 
       <div class="wf-arrow"><i data-lucide="arrow-right"></i></div>
 
       <div class="wf-node">
         <div class="wf-node-icon"><i data-lucide="hard-drive"></i></div>
-        <div class="wf-node-body">
-          <h4>Entrega no Google Drive</h4>
-          <p>Todo conteúdo captado e produzido fica disponível no seu Drive — para acessar, reutilizar ou arquivar quando quiser. Para sempre.</p>
-          <span class="wf-node-badge"><i data-lucide="shield-check" style="width:10px;height:10px;"></i>Seu conteúdo, sempre</span>
-        </div>
+        <div class="wf-node-body"><h4>Entrega no Google Drive</h4><p>Todo o conteúdo fica com você, para sempre.</p></div>
       </div>
-
-    </div><!-- /workflow-flow -->
+      </div>
+    </details>
   </div>
 </section>
 
@@ -968,14 +858,7 @@
       <div class="sobre-story reveal">
         <div class="section-label"><i data-lucide="users" style="width:11px;height:11px;"></i>Sobre Nós</div>
         <h2>Excelentes profissionais sendo percebidos<br/><span class="green-text">abaixo do nível do trabalho que entregam.</span></h2>
-        <p>A Actus nasceu para reduzir essa distância. Vimos harmonizadores excepcionais com agendas vazias enquanto profissionais medianos lotavam as suas — não porque eram melhores, mas porque eram mais visíveis e percebidos como mais valiosos.</p>
-        <p>Nossa especialização no mercado da harmonização facial não é coincidência. É uma escolha deliberada. <strong>Quanto mais profundo é o entendimento do negócio do cliente, mais precisa é a comunicação — e maior é o resultado.</strong> Lucca na direção criativa. João Pedro na estratégia. Um objetivo: transformar autoridade clínica em marca reconhecida e comercialmente mais forte.</p>
-        <div class="sobre-pillars">
-          <div class="pillar"><div class="pillar-icon"><i data-lucide="compass"></i></div><div class="pillar-text"><strong>Especialização HOF</strong><span>Conhecimento profundo do mercado e do paciente</span></div></div>
-          <div class="pillar"><div class="pillar-icon"><i data-lucide="trending-up"></i></div><div class="pillar-text"><strong>Autoridade que Converte</strong><span>Marca percebida como referência gera demanda qualificada</span></div></div>
-          <div class="pillar"><div class="pillar-icon"><i data-lucide="video"></i></div><div class="pillar-text"><strong>Produção Mobile-First</strong><span>Estética de alto nível sem parar sua rotina clínica</span></div></div>
-          <div class="pillar"><div class="pillar-icon"><i data-lucide="bar-chart-2"></i></div><div class="pillar-text"><strong>Acompanhamento Contínuo</strong><span>Estratégia ajustada pelos dados, não pela intuição</span></div></div>
-        </div>
+        <p>A Actus nasceu para reduzir essa distância. Nossa especialização em harmonização facial é uma escolha deliberada: <strong>quanto mais profundo o entendimento do negócio do cliente, mais precisa é a comunicação — e maior é o resultado.</strong></p>
       </div>
       <div class="sobre-team reveal" style="transition-delay:0.15s;">
         <p class="team-heading">Os fundadores</p>
@@ -1003,114 +886,6 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ══════ PLANOS ══════ -->
-<section id="planos">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label"><i data-lucide="layers" style="width:11px;height:11px;"></i>Planos &amp; Investimento</div>
-      <h2 class="section-title">Modelos de parceria<br/><span class="green-text">pelo objetivo, não pelo volume.</span></h2>
-      <p class="section-desc">Cada modelo foi desenhado para um momento diferente da sua marca. O objetivo vem primeiro — os entregáveis são consequência.</p>
-    </div>
-    <div class="planos-grid">
-
-      <!-- AUTORIDADE ESSENCIAL -->
-      <div class="plano-card reveal">
-        <p class="plano-nome">AUTORIDADE ESSENCIAL</p>
-        <p class="plano-preco">R$ 1.500<span>/mês</span></p>
-        <p class="plano-sub">Para especialistas que precisam organizar o posicionamento e construir uma presença coerente.</p>
-        <div class="plano-divider"></div>
-        <p style="font-size:11px;color:#00A859;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:12px;">Objetivo: clareza de marca e consistência</p>
-        <ul class="plano-itens">
-          <li><i data-lucide="check-circle"></i>4h de captação no seu espaço</li>
-          <li><i data-lucide="check-circle"></i>4 vídeos de posicionamento com roteiro estratégico</li>
-          <li><i data-lucide="check-circle"></i>4 posts estáticos de autoridade</li>
-          <li><i data-lucide="check-circle"></i>Planejamento de conteúdo mensal</li>
-          <li><i data-lucide="check-circle"></i>Acompanhamento via WhatsApp</li>
-        </ul>
-        <a href="https://api.whatsapp.com/send?phone=5567999001752&text=Ol%C3%A1%2C+tenho+interesse+no+plano+Autoridade+Essencial+da+Actus!" target="_blank" class="plano-cta">
-          <i data-lucide="message-circle" style="width:15px;height:15px;"></i>Quero este plano
-        </a>
-      </div>
-
-      <!-- AUTORIDADE CONTÍNUA (destaque) -->
-      <div class="plano-card destaque reveal" style="transition-delay:0.1s;">
-        <span class="plano-badge">Mais Popular</span>
-        <p class="plano-nome">AUTORIDADE CONTÍNUA</p>
-        <p class="plano-preco">R$ 2.100<span>/mês</span></p>
-        <p class="plano-sub">Para especialistas que já têm presença digital e querem transformar conhecimento em comunicação frequente e desejável.</p>
-        <div class="plano-divider"></div>
-        <p style="font-size:11px;color:#00A859;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:12px;">Objetivo: reconhecimento, confiança e demanda</p>
-        <ul class="plano-itens">
-          <li><i data-lucide="check-circle"></i>6h de captação (2 períodos por mês)</li>
-          <li><i data-lucide="check-circle"></i>8 vídeos de posicionamento com roteiro estratégico</li>
-          <li><i data-lucide="check-circle"></i>4 posts estáticos de autoridade</li>
-          <li><i data-lucide="check-circle"></i>Otimização de conteúdo para cada rede</li>
-          <li><i data-lucide="check-circle"></i>Planejamento e calendário editorial mensal</li>
-          <li><i data-lucide="check-circle"></i>Acompanhamento via WhatsApp</li>
-        </ul>
-        <a href="https://api.whatsapp.com/send?phone=5567999001752&text=Ol%C3%A1%2C+tenho+interesse+no+plano+Autoridade+Cont%C3%ADnua+da+Actus!" target="_blank" class="plano-cta">
-          <i data-lucide="zap" style="width:15px;height:15px;"></i>Quero este plano
-        </a>
-      </div>
-
-      <!-- CRESCIMENTO ESTRATÉGICO -->
-      <div class="plano-card reveal" style="transition-delay:0.2s;">
-        <p class="plano-nome">CRESCIMENTO ESTRATÉGICO</p>
-        <p class="plano-preco">R$ 2.900<span>/mês</span></p>
-        <p class="plano-sub">Para especialistas que querem integrar conteúdo, distribuição e análise de resultados em um sistema contínuo.</p>
-        <div class="plano-divider"></div>
-        <p style="font-size:11px;color:#00A859;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:12px;">Objetivo: autoridade como canal de aquisição</p>
-        <ul class="plano-itens">
-          <li><i data-lucide="check-circle"></i>8h de captação (4 períodos por mês)</li>
-          <li><i data-lucide="check-circle"></i>12 vídeos de posicionamento com roteiro estratégico</li>
-          <li><i data-lucide="check-circle"></i>8 posts estáticos de autoridade</li>
-          <li><i data-lucide="check-circle"></i>Tráfego pago orientado a aquisição de pacientes</li>
-          <li><i data-lucide="check-circle"></i>Planejamento e calendário editorial mensal</li>
-          <li><i data-lucide="check-circle"></i>Relatório mensal de desempenho</li>
-          <li><i data-lucide="check-circle"></i>Acompanhamento direto com os fundadores</li>
-        </ul>
-        <p style="font-size:11px;color:var(--white-3);margin-bottom:16px;line-height:1.5;">* Verba de mídia não inclusa — paga diretamente à Meta/Google.</p>
-        <a href="https://api.whatsapp.com/send?phone=5567999001752&text=Ol%C3%A1%2C+tenho+interesse+no+plano+Crescimento+Estrat%C3%A9gico+da+Actus!" target="_blank" class="plano-cta">
-          <i data-lucide="trending-up" style="width:15px;height:15px;"></i>Quero este plano
-        </a>
-      </div>
-
-      <!-- PROJETOS ESPECIAIS -->
-      <div class="plano-card plano-projeto reveal" style="transition-delay:0.3s;">
-        <span class="plano-badge">Sob Medida</span>
-        <div class="plano-projeto-inner">
-
-          <div class="plano-projeto-head">
-            <div class="plano-projeto-icon"><i data-lucide="sparkles"></i></div>
-            <p class="plano-nome">PROJETOS</p>
-            <p class="plano-sub">Soluções personalizadas para negócios com demandas únicas. Escopo, prazo e entrega definidos juntos — do zero.</p>
-          </div>
-
-          <ul class="plano-itens plano-projeto-feats">
-            <li><i data-lucide="check-circle"></i>Cobertura de Eventos &amp; Congressos</li>
-            <li><i data-lucide="check-circle"></i>Vídeos Institucionais</li>
-            <li><i data-lucide="check-circle"></i>Lançamentos de Produto</li>
-            <li><i data-lucide="check-circle"></i>Mini-documentários Corporativos</li>
-            <li><i data-lucide="check-circle"></i>Campanhas Sazonais Completas</li>
-            <li><i data-lucide="check-circle"></i>Escopo 100% Personalizado</li>
-          </ul>
-
-          <div class="plano-projeto-cta-wrap">
-            <p class="plano-projeto-price">Sob consulta</p>
-            <p class="plano-projeto-price-note">Orçamento via<br/>reunião estratégica</p>
-            <a href="https://api.whatsapp.com/send?phone=5567999001752&text=Ol%C3%A1%2C+quero+discutir+um+projeto+personalizado+com+a+Actus!" target="_blank" class="plano-cta-projeto">
-              <i data-lucide="calendar"></i>Agendar Reunião
-            </a>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-    <p class="planos-nota">Não tem certeza qual modelo é o ideal para o seu momento? <a href="https://api.whatsapp.com/send?phone=5567999001752&text=Ol%C3%A1%2C+quero+conversar+com+um+estrategista+da+Actus!" target="_blank">Converse com um estrategista.</a></p>
   </div>
 </section>
 
@@ -1159,7 +934,7 @@
         <div class="social-links">
           <a href="https://www.instagram.com/actusmidia/" target="_blank" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
           <a href="https://www.tiktok.com/@actusmidia" target="_blank" class="social-link" aria-label="TikTok"><i data-lucide="music-2"></i></a>
-          <a href="https://api.whatsapp.com/send?phone=5567999001752" target="_blank" class="social-link" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=5567996119356" target="_blank" class="social-link" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
         </div>
       </div>
       <div class="footer-col">
@@ -1178,13 +953,14 @@
           <li><a href="#processo">Como Trabalhamos</a></li>
           <li><a href="#sobre">Sobre Nós</a></li>
           <li><a href="#planos">Planos</a></li>
+          <li><a href="#projetos">Projetos</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Contato</h4>
         <ul>
           <li>
-            <a href="https://api.whatsapp.com/send?phone=5567999001752" target="_blank" class="whatsapp-btn">
+            <a href="https://api.whatsapp.com/send?phone=5567996119356" target="_blank" class="whatsapp-btn">
               <i data-lucide="message-circle"></i>WhatsApp
             </a>
           </li>
@@ -1204,12 +980,16 @@
 <button id="back-to-top" aria-label="Voltar ao topo"><i data-lucide="arrow-up" style="width:18px;height:18px;"></i></button>
 
 <!-- Floating WhatsApp -->
-<a href="https://api.whatsapp.com/send?phone=5567999001752" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+<a href="https://api.whatsapp.com/send?phone=5567996119356" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <script>
   lucide.createIcons();
+
+  /* abre o "como funciona" ao navegar pelo link */
+  function openProcesso(){ if(location.hash==='#processo'){ const d=document.getElementById('processo'); if(d) d.open=true; } }
+  window.addEventListener('hashchange',openProcesso); openProcesso();
 
   /* ── PRELOADER ── */
   window.addEventListener('load', () => {
@@ -1418,7 +1198,7 @@ async function enviarAnalise(e) {
 
   setTimeout(() => {
     const msg = encodeURIComponent(`Olá! Vim pelo site da Actus e quero uma análise do meu perfil. Sou ${area} e meu Instagram é @${instagram}.`);
-    window.open(`https://api.whatsapp.com/send?phone=5567999001752&text=${msg}`, '_blank');
+    window.open(`https://api.whatsapp.com/send?phone=5567996119356&text=${msg}`, '_blank');
     document.getElementById('modal-analise').style.display = 'none';
     document.getElementById('form-analise').style.display = 'block';
     document.getElementById('modal-sucesso').style.display = 'none';
