@@ -1176,6 +1176,8 @@
 </div>
 
 <script>
+/* origem do lead: links externos usam /?origem=nome#diagnostico (só letras, números, - e _) */
+const ORIGEM = ((new URLSearchParams(location.search).get('origem') || '').replace(/[^a-z0-9_-]/gi,'').slice(0,40)) || 'site-hero';
 const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzur0DsycWUi8fL3nuB2DyeU4Ue2q7mubBd8aHZGfKHUUIERU_QqtCUv_TFHK3iVqMs/exec';
 
 async function enviarAnalise(e) {
@@ -1194,7 +1196,7 @@ async function enviarAnalise(e) {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ nome, instagram, whatsapp, area, origem: 'site-hero', data: new Date().toISOString() })
+      body: JSON.stringify({ nome, instagram, whatsapp, area, origem: ORIGEM, data: new Date().toISOString() })
     });
   } catch(_) {}
 
