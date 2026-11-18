@@ -1,0 +1,385 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>O paciente de 2027</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..700;1,400..700&family=Figtree:wght@300..800&display=swap">
+<style>
+/* Layout: faixa roxa de abertura com o elemento gráfico ACTUS; corpo em coluna de leitura (~740px) sobre papel claro; cada mudança = dado → leitura → ação. Identidade ACTUS: roxo profundo, lima, papel esverdeado, azul aço */
+:root{
+  --purple:#1A103F; --purple-2:#2E2368; --lime:#ACFF80; --paper:#EAF2DD; --steel:#6F92B2; --lav:#C9C4DE;
+  --bg:#EAF2DD; --surface:#F5F9EE; --ink:#1A103F; --muted:#4A4470; --line:#CFD8C2; --soft:#DFE9CF;
+  --mark:#1A103F;
+  --display:"Bodoni Moda",Didot,Georgia,serif;
+  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#140C33; --surface:#1F1650; --ink:#EAF2DD; --muted:#C9C4DE; --line:#352B6E; --soft:#251B5C; --mark:#ACFF80; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#140C33; --surface:#1F1650; --ink:#EAF2DD; --muted:#C9C4DE; --line:#352B6E; --soft:#251B5C; --mark:#ACFF80; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+b{font-weight:700}
+a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--steel)}
+a:focus-visible{outline:2px solid var(--steel);outline-offset:2px;border-radius:2px}
+.inner{max-width:740px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* Abertura */
+.hero{background:var(--purple);color:var(--paper);position:relative;overflow:hidden}
+.hero .inner{position:relative;padding-block:44px 52px;display:flex;flex-direction:column;gap:22px;z-index:1}
+.hero svg.mark{position:absolute;right:-120px;top:40px;width:420px;height:auto;opacity:.95;z-index:0}
+.hero .rings{position:absolute;right:-200px;top:-60px;width:620px;height:620px;z-index:0;opacity:.35}
+.logo{width:150px;color:var(--paper)}
+.pill{display:inline-block;align-self:flex-start;background:var(--lime);color:var(--purple);font-weight:700;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.hero h1{font-family:var(--display);font-weight:500;font-size:clamp(2.5rem,9vw,4.2rem);line-height:1.02;letter-spacing:-0.02em;max-width:12ch}
+.hero h1 i{color:var(--lime)}
+.hero .lead{font-size:1.1rem;color:var(--lav);max-width:52ch}
+.hero .meta{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--lime)}
+@media (max-width:560px){.hero svg.mark{width:260px;right:-110px;top:20px;opacity:.5}}
+
+main.inner{padding-block:48px 72px;display:flex;flex-direction:column;gap:68px}
+nav{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:14px}
+nav ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:4px 20px}
+nav a{text-decoration:none;font-size:.94rem;display:flex;gap:10px;padding:4px 0}
+nav a span{font-family:var(--display);font-style:italic;color:var(--muted);min-width:1.2em}
+nav a:hover{text-decoration:underline}
+
+section{display:flex;flex-direction:column;gap:20px;scroll-margin-top:24px}
+.tag{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h2{font-family:var(--display);font-weight:500;font-size:clamp(1.9rem,6vw,2.6rem);line-height:1.08;letter-spacing:-0.01em}
+h2 i{font-style:italic}
+h3{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.read{display:flex;flex-direction:column;gap:12px;max-width:66ch}
+
+.stat{display:grid;grid-template-columns:auto 1fr;gap:8px 20px;align-items:center;background:var(--purple);color:var(--paper);border-radius:18px;padding:22px 24px}
+.stat b{font-family:var(--display);font-weight:500;font-size:clamp(2.6rem,10vw,3.6rem);line-height:1;color:var(--lime);font-variant-numeric:lining-nums tabular-nums}
+.stat p{font-size:1rem;min-width:0}
+.stat small{grid-column:1/-1;font-size:.78rem;color:var(--lav);line-height:1.5}
+@media (max-width:460px){.stat{grid-template-columns:1fr}}
+
+.quote{font-family:var(--display);font-style:italic;font-size:1.45rem;line-height:1.35;border-left:3px solid var(--steel);padding:2px 0 2px 18px;display:flex;flex-direction:column;gap:8px}
+.quote span{font-family:var(--sans);font-style:normal;font-size:.8rem;color:var(--muted)}
+
+.todo{background:var(--soft);border-radius:18px;padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.todo ul{margin:0;padding-left:1.15em;display:flex;flex-direction:column;gap:8px}
+.todo li::marker{color:var(--steel)}
+
+/* Formatos */
+.formats{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.fmt{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.fmt header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.fmt h4{margin:0;font-family:var(--display);font-weight:600;font-size:1.3rem;line-height:1.15}
+.dur{font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--lime);color:var(--purple);padding:3px 10px;border-radius:999px;white-space:nowrap}
+.fmt .ex{font-family:var(--display);font-style:italic;font-size:1.02rem;color:var(--muted)}
+.fmt .why{font-size:.92rem}
+.fmt .care{font-size:.84rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px}
+.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.spec{background:var(--surface);padding:16px 18px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.spec b{font-family:var(--display);font-weight:600;font-size:1.15rem}
+.spec span{font-size:.88rem;color:var(--muted)}
+
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.88rem;line-height:1.5}
+th,td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+thead th{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--purple);color:var(--paper)}
+tbody th{font-weight:700;width:18%}
+tr:last-child td,tr:last-child th{border-bottom:0}
+.fine{font-size:.82rem;color:var(--muted)}
+
+.check{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;counter-reset:c}
+.check li{display:grid;grid-template-columns:30px 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.check li::before{counter-increment:c;content:counter(c);width:28px;height:28px;border-radius:50%;background:var(--lime);color:var(--purple);display:grid;place-items:center;font-size:.82rem;font-weight:800;font-variant-numeric:tabular-nums}
+.check li div{min-width:0}
+
+.sources ol{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:8px;font-size:.84rem;color:var(--muted)}
+.sources a{word-break:break-word}
+
+footer.end{background:var(--purple);color:var(--paper)}
+footer.end .inner{padding-block:36px 44px;display:flex;flex-direction:column;gap:14px}
+footer.end .logo{width:170px}
+footer.end p{color:var(--lav);font-size:.92rem}
+footer.end .sig{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--lime)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<div class="hero">
+  <svg class="rings" viewBox="0 0 620 620" aria-hidden="true"><g fill="none" stroke="#6F92B2" stroke-width="1.5"><circle cx="310" cy="310" r="200"/><circle cx="310" cy="310" r="250"/><circle cx="310" cy="310" r="300"/></g></svg>
+  <svg class="mark" viewBox="0 0 1020 975" aria-hidden="true"><path fill="#ACFF80" d="M927.11,712.95c-36.19,69.13-95.01,133.13-165.630,180.16-74.75,49.79-154.83,76.17-231.67,76.34h-.61c-77.88,0-144.4-34.39-169.56-87.7-21.06-44.62-9.93-96.59,31.26-146.38,89.99-103.09,179.99-206.190,269.99-309.28-3.71-12.86-7.42-25.72-11.13-38.57-6.83-2.04-16.71-4.8-28.91-7.62-3.03-.7-5.24-1.15-6.22-1.4-28.44-7-57.63-13.33-85.84-19.46-21.32-4.62-43.34-9.41-64.89-14.44-3.6-.84-11.88-2.99-22.34-5.69-33.06-8.57-101.44-26.29-107.1-24.2l-11.65,28.27c22.74,14.81,42.47,32.31,59.09,52.37,4.87,5.87,27.81,34.06,44.73,78.73,22.16,58.49,21.44,112.090,17.93,145.34-16.3-.19-32.6-.38-48.9-.56,4.45-19.11,17.88-87.29-18.4-160.83-34.19-69.29-91.23-100.2-109.5-109.18,13.87-25.26,27.73-50.51,41.6-75.76,123.11,28.25,246.22,56.5,369.33,84.76,4.67,13.86,9.31,27.85,13.91,41.98,3.39,10.4,6.72,20.75,9.99,31.05l.06.29c-45.49,54.3-91.8,108.9-138.94,163.78-43.44,50.57-86.76,100.41-129.94,149.51l-.26.33c-34.01,41.83-72.53,89.23-29.1,141.52,37.64,45.32,101.7,48.95,148.81,44.04,61.27-6.42,121.69-29.75,157.8-49.44,114.71-62.6,196.75-170.58,225.04-296.22,28.44-126.27,1.63-254.26-75.5-360.44C765.6,93.53,611.73,24.98,448.97,40.84c-164.65,16.03-303.91,113.99-372.56,262.05-89.44,192.89-27.59,416.94,150.36,544.84l.58.41-20.56,31.14-.61-.43c-45.61-32.89-82.97-69.75-114.14-112.74C41.47,696.42,11.37,619.47,2.57,537.4c-8.13-76.16,3.11-154.8,32.53-227.34,30.77-75.87,80.62-143.64,144.15-195.96C245.74,59.31,326.53,22.39,412.8,7.37c93.6-16.29,187.98-5.46,272.92,31.26,79.74,34.51,149.57,90.66,201.92,162.38,52.37,71.78,84.59,155.45,93.1,241.98,9.06,92.23-9.47,185.57-53.63,269.96Z"/></svg>
+  <div class="inner">
+    <div class="logo"><svg aria-label="Logo ACTUS Mídia" viewBox="0 0 1929 613" fill="currentColor"><path d="M252.61,0C113.09,0,0,113.09,0,252.6s113.09,252.61,252.61,252.61,252.6-113.09,252.6-252.61S392.12,0,252.61,0ZM384.27,450.81c-36.54,24.34-75.69,37.23-113.25,37.32h-.3c-38.07,0-70.59-16.81-82.89-42.87-10.3-21.81-4.86-47.22,15.28-71.56,43.99-50.4,87.990-100.8,131.98-151.19-1.81-6.28-3.63-12.57-5.44-18.85-3.34-.99-8.17-2.35-14.13-3.72-1.48-.34-2.56-.56-3.04-.68-13.9-3.42-28.17-6.52-41.96-9.51-10.42-2.26-21.19-4.6-31.72-7.06-1.76-.41-5.81-1.46-10.92-2.78-16.16-4.19-49.59-12.85-52.36-11.83l-5.69,13.82c11.12,7.24,20.76,15.8,28.89,25.6,2.38,2.87,13.59,16.65,21.86,38.48,10.83,28.59,10.48,54.8,8.77,71.05-7.97-.09-15.94-.18-23.91-.27,2.17-9.34,8.74-42.67-9-78.62-16.71-33.87-44.6-48.98-53.53-53.37,6.78-12.35,13.56-24.69,20.34-37.04,60.18,13.81,120.36,27.62,180.55,41.44,2.28,6.77,4.55,13.61,6.8,20.52,1.66,5.08,3.28,10.14,4.88,15.18l.03.14c-22.24,26.54-44.88,53.24-67.92,80.06-21.24,24.72-42.41,49.08-63.52,73.09l-.13.16c-16.63,20.45-35.46,43.62-14.23,69.18,18.4,22.15,49.72,23.93,72.75,21.53,29.95-3.14,59.49-14.54,77.14-24.17,56.08-30.6,96.18-83.39,110.01-144.8,13.9-61.73.79-124.3-36.91-176.2-46.42-63.9-121.64-97.42-201.21-89.66-80.49,7.84-148.57,55.72-182.12,128.1-43.72,94.29-13.49,203.82,73.5,266.35l.28.2-10.05,15.22-.3-.21c-22.3-16.08-40.56-34.1-55.79-55.11-24.72-34.070-39.44-71.68-43.74-111.8-3.98-37.23,1.52-75.68,15.9-111.13,15.04-37.09,39.41-70.22,70.46-95.8,32.51-26.78,72-44.83,114.17-52.17,45.75-7.97,91.89-2.67,133.41,15.28,38.98,16.87,73.12,44.32,98.71,79.38,25.6,35.09,41.35,75.99,45.51,118.29,4.43,45.09-4.63,90.71-26.21,131.97-17.69,33.8-46.45,65.080-80.97,88.07Z"/><path d="M888.26,441.22h-59.2l-28.63-80.07c-26.19-35.72-71.95-54.54-116.04-48.41-4.07.57-20.79,4.24-22.67,6.94l-40.81,120.61h-15.73l36.99-112.86c-33.61,17.43-51.14,50.53-62.98,85.04-1.24.4-2.27-.18-3.36-.65-2.25-.97-20.51-11.48-20.51-12.69,16.09-21.930,34.1-43.89,54.46-62,11.63-10.34,24.25-17.69,37.84-25.07l82.59-239.34c.36-1.16,1.07-1.35,2.15-1.55,2.14-.4,19.78-.18,20.84.46l135.04,369.58ZM791.12,334.83l-68.43-195.18-56.44,165.57c44.33-11.86,90.44.22,124.87,29.61Z"/><path d="M1425.72,116.52h63.83l-42.43,224.45c-11.18,67.83,34.93,104.08,99.79,89.62,42.86-9.56,73.72-48.53,82.82-90.17l55.01-272.01,14.58,4.12-54.65,271.73c-10.27,43.54-44.91,81.99-87.81,95.35-47.35,14.75-123.6,9.07-155.58-33.63-29.59-39.51-19.34-83.44-10.43-127.76,10.87-54.06,24.82-107.48,34.87-161.71Z"/><path d="M1673.77,406.87c-.52-.91-.05-1.78.35-2.63,2.21-4.68,9.99-10.94,12.93-15.74,18.47,19.25,44.91,35.73,72.17,37.9,75.07,5.95,109.73-58.21,64.64-117.37-40.15-52.68-125.63-92.89-93.58-175.18,22.22-57.06,85.11-76.52,141.1-61.06,19.86,5.49,40.93,14.87,57.46,26.79.51,1.97-8.52,15.91-9.6,15.91-18.51-15.94-38.91-26.87-63.2-31.06-69.54-11.99-111.32,45.1-62.18,101.03,33.17,37.75,90.69,69.49,104.29,120.5,16.49,61.83-29.77,116.19-87.42,131.3-48.14,12.61-98.13-.69-136.98-30.38Z"/><path d="M1150.96,86.04l-15.72,47.13c-1.4.37-1.53-.36-2.32-.91-4.55-3.18-9.36-8.46-13.89-12.01-41.6-32.67-87.39-59.74-139.48-29.45-64.85,37.71-60.28,154.28-44.78,217.4,25.03,101.93,130.41,176.21,211.55,76.1,2.05-2.53,10.01-15.06,11.12-15.76,2.07-1.31,7.21,4.53,10.18,4.24-41.68,75.53-132.85,98.5-207.14,54.03-123.58-73.97-118.73-278.63,8.55-345.6,58.65-30.86,123.01-17.6,181.92,4.83Z"/><path d="M1323.97,85.06v355.23h-53.65V85.06h-92.51v-15.73h314.99l1.24,1.53c-.25,4.43,1.54,10.67-1.24,14.19h-168.83Z"/><path d="M1598.63,612.34h-10.85v-60.86l-27.18,48.99h-9.61l-27.18-48.99v60.86h-10.85v-79.11h12.66l30.4,55.78,30.4-55.78h12.21v79.11Z"/><path d="M1667.17,506.83l-17.35,16.16h-11.75l14.64-16.16h14.47ZM1652.2,612.34h-11.08v-79.11h11.08v79.11Z"/><path d="M1723.17,612.34h-28.48v-79.11h28.48c13.45,0,23.86,3.46,31.22,10.37,7.36,6.91,11.05,16.64,11.05,29.19s-3.68,22.27-11.05,29.19c-7.37,6.91-17.77,10.37-31.22,10.37ZM1723.17,542.83h-17.41v59.9h17.41c9.79,0,17.41-2.64,22.83-7.91,5.42-5.27,8.14-12.62,8.14-22.04s-2.71-16.76-8.14-22.04c-5.43-5.27-13.04-7.91-22.83-7.91Z"/><path d="M1813.82,612.34h-11.08v-79.11h11.08v79.11Z"/><path d="M1917,612.34l-9.1-20.91h-39.5l-9.04,20.91h-11.420l34.7-79.110h11.53l34.7,79.11h-11.87ZM1888.18,545.88l-15.71,36.17h31.36l-15.65-36.17Z"/></svg></div>
+    <span class="pill">Edição novembro 2026</span>
+    <h1>O paciente de 2027 <i>escolhe diferente</i></h1>
+    <p class="lead">Seis mudanças em como pacientes de saúde e estética descobrem, avaliam e escolhem um profissional. Os formatos de vídeo que acompanham essas mudanças. Cada ponto com dado, fonte e o que fazer em janeiro.</p>
+    <div class="meta"><span>8 minutos de leitura</span><span>Médicos · dentistas · biomédicos</span></div>
+  </div>
+</div>
+
+<main class="inner">
+
+<nav aria-label="Conteúdo">
+  <ul>
+    <li><a href="#ia"><span>1</span>A busca começa na IA</a></li>
+    <li><a href="#google"><span>2</span>Seu Instagram aparece no Google</a></li>
+    <li><a href="#avaliacoes"><span>3</span>Avaliação virou filtro</a></li>
+    <li><a href="#envios"><span>4</span>Envio vale mais que curtida</a></li>
+    <li><a href="#rosto"><span>5</span>O rosto real virou prova</a></li>
+    <li><a href="#anuncios"><span>6</span>No anúncio, o vídeo escolhe o público</a></li>
+    <li><a href="#formatos"><span>→</span>Formatos de vídeo para 2027</a></li>
+    <li><a href="#conselhos"><span>§</span>O que cada conselho permite</a></li>
+    <li><a href="#janeiro"><span>✓</span>Lista para janeiro</a></li>
+  </ul>
+</nav>
+
+<section id="ia">
+  <span class="tag">Mudança 1</span>
+  <h2>A busca começa <i>na IA</i></h2>
+  <div class="stat">
+    <b>71%</b>
+    <p>dos brasileiros usaram ChatGPT, Gemini ou outra IA no último ano para tirar dúvidas sobre sintomas ou doenças. Dermatologia aparece em 32,8% das buscas.</p>
+    <small>Pesquisa Olá Doutor com 500 brasileiros adultos de todas as regiões, divulgada pela CNN Brasil em 2026.</small>
+  </div>
+  <div class="read">
+    <p>Nos Estados Unidos, onde já se mede o passo seguinte, <b>47% dos pacientes usaram IA para encontrar um novo médico</b>, contra 31% no fim de 2025. Pela primeira vez, mais gente disse que a IA influenciou a escolha (36%) do que o Google (34%). O mesmo estudo traz um alerta: dois terços dos que usaram IA encontraram informação errada sobre profissionais.</p>
+    <p>A IA monta a resposta com o que acha publicado sobre você: Instagram, Google, site, plataformas de agendamento. Se esses lugares dizem coisas diferentes, ela erra ou indica outra pessoa.</p>
+  </div>
+  <div class="todo">
+    <h3>O que fazer</h3>
+    <ul>
+      <li>Deixe nome, especialidade, procedimentos e cidade escritos do mesmo jeito na bio, no Google, no site e no Doctoralia.</li>
+      <li>Pergunte ao ChatGPT "quem faz [seu procedimento] em [sua cidade]?" e veja se você aparece e o que ele diz.</li>
+      <li>Transforme as perguntas que você mais ouve no consultório em posts, com as palavras que a paciente usa.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="google">
+  <span class="tag">Mudança 2</span>
+  <h2>Seu Instagram <i>aparece no Google</i></h2>
+  <div class="stat">
+    <b>10.07</b>
+    <p>Desde 10 de julho de 2025, fotos, vídeos, carrosséis e Reels de contas profissionais públicas podem aparecer no Google e em outros buscadores.</p>
+    <small>Mudança nas configurações de privacidade do Instagram, ativada por padrão para contas profissionais de maiores de 18 anos (PPC Land).</small>
+  </div>
+  <div class="read">
+    <p>Um post deixou de durar só os dias em que circula no feed. Quem pesquisa "preenchimento labial Campo Grande" pode cair direto num Reels seu de meses atrás, e a legenda é o que ajuda o buscador a entender do que ele trata.</p>
+  </div>
+  <div class="todo">
+    <h3>O que fazer</h3>
+    <ul>
+      <li>Escreva na primeira linha da legenda o procedimento e a cidade, em linguagem simples.</li>
+      <li>Confira em Configurações › Privacidade se a opção de aparecer em buscadores está ligada.</li>
+      <li>Revise as legendas dos seus 10 posts mais vistos: elas viraram páginas de busca.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="avaliacoes">
+  <span class="tag">Mudança 3</span>
+  <h2>Avaliação <i>virou filtro</i></h2>
+  <div class="stat">
+    <b>75%</b>
+    <p>dos pacientes nem consideram um profissional com nota abaixo de 4,0. Para 44%, o corte é 4,5.</p>
+    <small>rater8, 2026 Patient Choice Report (Estados Unidos), divulgado pela TechTarget em junho de 2026.</small>
+  </div>
+  <div class="read">
+    <p>No mesmo estudo, 55% já deixaram de marcar ou cancelaram uma consulta por causa de avaliações, contra 40% um ano antes. E 66% dizem que a forma como o profissional responde a uma crítica muda a confiança que têm nele. Os motivos que mais afastam não são técnicos: equipe pouco prestativa (55%) e médico que não escuta (52%).</p>
+  </div>
+  <div class="todo">
+    <h3>O que fazer</h3>
+    <ul>
+      <li>Peça a avaliação no Google na saída do atendimento, com um QR code na recepção.</li>
+      <li>Responda todas as avaliações em até 48 horas, as boas e as ruins.</li>
+      <li>Na resposta, não confirme que a pessoa é sua paciente nem fale do tratamento dela. O sigilo vale também ali.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="envios">
+  <span class="tag">Mudança 4</span>
+  <h2>Envio vale <i>mais que curtida</i></h2>
+  <div class="quote">
+    "Os três sinais que mais pesam no ranqueamento são tempo assistido, curtidas e envios."
+    <span>Adam Mosseri, chefe do Instagram, janeiro de 2025 (Social Media Today)</span>
+  </div>
+  <div class="read">
+    <p>Mosseri também explicou o peso de cada um: curtidas contam um pouco mais para quem já te segue, e <b>envios contam mais para alcançar quem ainda não te conhece</b>. Para quem quer paciente novo, o post que vale é o que uma pessoa manda para outra no direct.</p>
+    <p>Na estética, a paciente encaminha o que resolve uma dúvida de alguém próximo: a amiga com medo de ficar artificial, a mãe que quer saber se ainda dá tempo.</p>
+  </div>
+  <div class="todo">
+    <h3>O que fazer</h3>
+    <ul>
+      <li>Nos insights, acompanhe envios por alcance e tempo médio assistido. Curtida sozinha diz pouco.</li>
+      <li>Faça posts que respondem uma dúvida específica e que alguém teria motivo para encaminhar.</li>
+      <li>Quando fizer sentido, peça com naturalidade: "manda para quem tem essa dúvida".</li>
+    </ul>
+  </div>
+</section>
+
+<section id="rosto">
+  <span class="tag">Mudança 5</span>
+  <h2>O rosto real <i>virou prova</i></h2>
+  <div class="quote">
+    "Num mundo em que tudo pode ser aperfeiçoado, a imperfeição vira um sinal."
+    <span>Adam Mosseri, memorando de fim de ano, 31 de dezembro de 2025</span>
+  </div>
+  <div class="read">
+    <p>Com imagens de IA cada vez mais realistas, o chefe do Instagram prevê que o público vai começar desconfiando do que vê e vai olhar para <b>quem</b> está falando, mais do que para o que é dito. A ciência já apontava nessa direção: num estudo da Georgia Tech com a Yahoo Research, com 1,1 milhão de fotos do Instagram, imagens com rosto tiveram 38% mais chance de receber curtidas e 32% mais chance de receber comentários.</p>
+    <p>Na saúde isso pesa mais. No relatório de saúde do Edelman Trust Barometer 2026, 64% das pessoas acham que alguém que domina IA pode igualar ou superar um médico em pelo menos uma tarefa de saúde. A autoridade do profissional precisa aparecer, porque deixou de ser presumida.</p>
+  </div>
+  <div class="todo">
+    <h3>O que fazer</h3>
+    <ul>
+      <li>Apareça falando, no consultório, gravado no celular. Produção simples passa mais confiança do que imagem perfeita.</li>
+      <li>Mostre como você pensa: por que indicou, por que não indicou, o que avalia antes.</li>
+      <li>Evite imagem de banco ou gerada por IA para representar seus resultados.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="anuncios">
+  <span class="tag">Mudança 6</span>
+  <h2>No anúncio, <i>o vídeo escolhe o público</i></h2>
+  <div class="stat">
+    <b>75%</b>
+    <p>das clínicas e hospitais brasileiros já investem em anúncios pagos, e 85% usam o Instagram como principal canal.</p>
+    <small>Doctoralia, Panorama das Clínicas e Hospitais 2026, com mais de 600 gestores, divulgado pelo Medicina S/A em abril de 2026.</small>
+  </div>
+  <div class="read">
+    <p>Com a concorrência toda no mesmo lugar, mudou também como a Meta decide quem vê cada anúncio. Desde o fim de 2024 ela usa o Andromeda, um sistema feito para escolher entre um volume enorme de criativos, enquanto o Advantage+ automatiza público, orçamento e lance. Na nossa leitura, isso significa que <b>o criativo pesa mais do que a segmentação</b>: o sistema aprende pelo próprio vídeo para quem ele serve.</p>
+  </div>
+  <div class="todo">
+    <h3>O que fazer</h3>
+    <ul>
+      <li>Suba vídeos realmente diferentes entre si, cada um falando com uma dor ou um tipo de paciente.</li>
+      <li>Anuncie o que já foi bem no orgânico, em vez de produzir peças só para anúncio.</li>
+      <li>Antes de refinar idade e interesses, teste criativos novos.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="formatos">
+  <span class="tag">Na prática</span>
+  <h2>Formatos de vídeo <i>para 2027</i></h2>
+  <p class="read">Seis formatos que respondem às mudanças acima e cabem na rotina de quem atende. Todos podem ser gravados no celular, no próprio consultório. As durações são pontos de partida, não regra.</p>
+  <div class="formats">
+    <article class="fmt">
+      <header><h4>Você perguntou</h4><span class="dur">30 a 60 s</span></header>
+      <p class="ex">"Toxina deixa a testa paralisada?"</p>
+      <p class="why">Pegue uma dúvida real de comentário, direct ou consulta e responda olhando para a câmera. É o formato que mais conversa com a busca na IA e no Google, porque usa as palavras da paciente.</p>
+      <p class="care">Não mostre nome nem print da paciente que perguntou.</p>
+    </article>
+    <article class="fmt">
+      <header><h4>Mito ou verdade</h4><span class="dur">15 a 30 s</span></header>
+      <p class="ex">"Bioestimulador engorda o rosto? Mito."</p>
+      <p class="why">Uma crença por vídeo, resposta logo no começo, explicação curta depois. É feito para ser encaminhado para a amiga que acreditava naquilo.</p>
+      <p class="care">Fale do procedimento, não de marca de produto.</p>
+    </article>
+    <article class="fmt">
+      <header><h4>Como eu decido</h4><span class="dur">45 a 90 s</span></header>
+      <p class="ex">"Três coisas que eu avalio antes de indicar preenchimento."</p>
+      <p class="why">Mostra seu raciocínio clínico, inclusive quando você não indica. É o que separa o profissional da resposta genérica da IA e constrói autoridade sem prometer resultado.</p>
+      <p class="care">Explique critérios, sem caso identificável.</p>
+    </article>
+    <article class="fmt">
+      <header><h4>Bastidor do cuidado</h4><span class="dur">15 a 30 s</span></header>
+      <p class="ex">Preparo da sala, materiais lacrados, a equipe, a chegada da paciente.</p>
+      <p class="why">Imagem real, sem acabamento de estúdio, é o sinal de autenticidade que o Instagram diz que vai pesar mais. Também tira o medo de quem nunca fez.</p>
+      <p class="care">Médicos: o CFM não permite que terceiros filmem procedimentos. Mostre o antes e o depois do atendimento, não o procedimento.</p>
+    </article>
+    <article class="fmt">
+      <header><h4>Guia completo</h4><span class="dur">2 a 3 min</span></header>
+      <p class="ex">"Lentes de contato dental: tudo o que você precisa saber antes."</p>
+      <p class="why">Desde janeiro de 2025 os Reels aceitam até 3 minutos. Um vídeo de referência sobre o procedimento principal fica indexado no Google e responde a busca de quem está decidindo.</p>
+      <p class="care">Inclua indicações, limites e cuidados, não só benefícios.</p>
+    </article>
+    <article class="fmt">
+      <header><h4>Resultado com contexto</h4><span class="dur">30 a 60 s</span></header>
+      <p class="ex">O caso, o que foi feito, o tempo de evolução e o que poderia não dar certo.</p>
+      <p class="why">O antes e depois continua sendo o conteúdo que mais desperta desejo. Com explicação, ele educa e respeita as regras de cada conselho.</p>
+      <p class="care">Siga a regra do seu conselho, no quadro abaixo, antes de publicar.</p>
+    </article>
+  </div>
+
+  <h3>Como gravar qualquer um deles</h3>
+  <div class="specs">
+    <div class="spec"><b>Vertical 9:16</b><span>A Meta recomenda vídeo feito para Reels, sem recortar formato horizontal.</span></div>
+    <div class="spec"><b>Mensagem em 5 s</b><span>No estudo da Meta com a Toluna, mensagem e marca nos primeiros 5 segundos deram 1,7x mais chance de intenção de compra.</span></div>
+    <div class="spec"><b>Legenda sempre</b><span>80% das pessoas têm mais chance de assistir até o fim quando há legenda (Verizon Media e Publicis, 2019).</span></div>
+    <div class="spec"><b>Fala + música</b><span>Combinar as duas dobrou a chance de o anúncio ficar entre os 20% melhores em interesse (Meta e Toluna).</span></div>
+    <div class="spec"><b>Pessoas reais</b><span>Cenas do dia a dia com pessoas reais deram 1,5x mais chance de intenção de compra (Meta e Toluna).</span></div>
+    <div class="spec"><b>Teste antes</b><span>Os Trial Reels, lançados em dezembro de 2024, mostram o vídeo primeiro só para quem não te segue.</span></div>
+  </div>
+</section>
+
+<section id="conselhos">
+  <span class="tag">Antes de postar</span>
+  <h2>O que cada <i>conselho permite</i></h2>
+  <p class="read">As regras mudaram nos últimos anos e são diferentes para cada profissão. Este é um resumo das principais, para consulta rápida.</p>
+  <div class="tbl" tabindex="0" role="region" aria-label="Comparação das regras de publicidade por conselho">
+    <table>
+      <thead><tr><th></th><th>Médicos · CFM</th><th>Dentistas · CFO</th><th>Biomédicos · CFBM</th></tr></thead>
+      <tbody>
+        <tr><th>Norma</th><td>Resolução CFM 2.336/2023, em vigor desde março de 2024</td><td>Resolução CFO-196/2019. A CFO-271/2025 mexeu em sorteios, brindes e cartões de desconto, não nas regras de publicidade</td><td>Código de Ética, Resolução CFBM 330/2020, com a Resolução 240/2014</td></tr>
+        <tr><th>Antes e depois</th><td>Permitido com caráter educativo, junto de indicações, evoluções boas e ruins e possíveis complicações. Paciente não identificado e imagem sem retoque</td><td>Permitido quando publicado pelo próprio dentista que fez o procedimento, com autorização prévia do paciente</td><td>Permitido com nome, número de inscrição, habilitação, a frase "Divulgação autorizada pelo usuário em TCLE" e, na legenda, "Esta imagem não representa, em hipótese alguma, garantia de resultado"</td></tr>
+        <tr><th>Filmar o procedimento</th><td>Terceiros não podem filmar procedimentos médicos (a exceção é o parto)</td><td>Evite imagem do procedimento em andamento. Confirme com o seu CRO</td><td>Vídeo de procedimento com nome, inscrição, habilitações e a informação do TCLE</td></tr>
+        <tr><th>Preço</th><td>Pode divulgar o valor da consulta</td><td>Proibido divulgar preços e descontos</td><td>Confirme com o seu CRBM</td></tr>
+        <tr><th>Depoimentos</th><td>Pode repostar, se forem sóbrios e sem adjetivos de superioridade</td><td>Vedados em peça publicitária</td><td>Confirme com o seu CRBM</td></tr>
+        <tr><th>Selfie com paciente</th><td>Imagem de paciente exige autorização e anonimato. Confirme com o seu CRM antes</td><td>Permitida com autorização prévia do paciente por termo de consentimento</td><td>Confirme com o seu CRBM</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="fine">Resumo informativo feito a partir das resoluções e das orientações dos conselhos. Não substitui o texto oficial nem a orientação do seu conselho regional, que pode ter entendimentos próprios.</p>
+</section>
+
+<section id="janeiro">
+  <span class="tag">Para levar</span>
+  <h2>Lista para <i>janeiro</i></h2>
+  <ol class="check">
+    <li><div><b>Mesmo nome em todo lugar.</b> Bio, Google, site e plataformas com nome, especialidade e cidade iguais.</div></li>
+    <li><div><b>Pergunte à IA sobre você.</b> Veja o que o ChatGPT responde quando alguém procura seu procedimento na sua cidade.</div></li>
+    <li><div><b>Legendas que o Google entende.</b> Procedimento e cidade na primeira linha dos posts.</div></li>
+    <li><div><b>QR de avaliação na recepção</b> e resposta a toda avaliação em até 48 horas, sem expor o paciente.</div></li>
+    <li><div><b>Um "Você perguntou" por semana,</b> respondendo a dúvida que você mais ouve.</div></li>
+    <li><div><b>Um guia completo de até 3 minutos</b> sobre o seu procedimento principal.</div></li>
+    <li><div><b>Seu rosto em vídeo,</b> explicando como você decide, gravado no consultório.</div></li>
+    <li><div><b>Leia a regra do seu conselho</b> antes do próximo antes e depois.</div></li>
+  </ol>
+</section>
+
+<section class="sources" id="fontes">
+  <h3>Fontes</h3>
+  <ol>
+    <li><a href="https://www.cnnbrasil.com.br/economia/money/tecnologia/7-em-cada-10-brasileiros-usam-ia-para-tirar-duvidas-de-saude-aponta-estudo/" target="_blank" rel="noopener">CNN Brasil: 7 em cada 10 brasileiros usam IA para tirar dúvidas de saúde (pesquisa Olá Doutor)</a></li>
+    <li><a href="https://www.techtarget.com/patientengagement/news/366643954/Almost-half-of-patients-use-AI-for-online-provider-search" target="_blank" rel="noopener">TechTarget: Almost half of patients use AI for online provider search (rater8, 2026 Patient Choice Report)</a></li>
+    <li><a href="https://ppc.land/instagram-content-becomes-searchable-on-google-starting-july-10/" target="_blank" rel="noopener">PPC Land: Instagram content becomes searchable on Google starting July 10</a></li>
+    <li><a href="https://www.socialmediatoday.com/news/instagram-shares-algorithm-insights-2025/738034/" target="_blank" rel="noopener">Social Media Today: Instagram shares algorithm insights for 2025 (Adam Mosseri)</a></li>
+    <li><a href="https://om.co/2026/01/01/what-is-instagrams-adam-mosseri-really-saying-in-his-year-end-memo/" target="_blank" rel="noopener">Om Malik: o memorando de fim de ano de Adam Mosseri</a></li>
+    <li><a href="https://www.news.gatech.edu/news/2014/03/20/face-it-instagram-pictures-faces-are-more-popular" target="_blank" rel="noopener">Georgia Tech: Instagram pictures with faces are more popular (Bakhshi, Shamma e Gilbert, ACM CHI 2014)</a></li>
+    <li><a href="https://www.edelman.com/trust/2026/trust-barometer/special-report-health" target="_blank" rel="noopener">Edelman: 2026 Trust Barometer Special Report, Trust and Health</a></li>
+    <li><a href="https://medicinasa.com.br/doctoralia-panorana-2026/" target="_blank" rel="noopener">Medicina S/A: Doctoralia, Panorama das Clínicas e Hospitais 2026</a></li>
+    <li><a href="https://engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine/" target="_blank" rel="noopener">Engineering at Meta: Meta Andromeda e Advantage+ (dezembro de 2024)</a></li>
+    <li><a href="https://macmagazine.com.br/post/2025/01/20/instagram-ganha-reels-de-ate-3-minutos-e-grade-de-posts-retangulares/" target="_blank" rel="noopener">MacMagazine: Instagram ganha Reels de até 3 minutos (janeiro de 2025)</a></li>
+    <li><a href="https://petapixel.com/2024/12/13/instagram-launches-trial-reels-so-you-can-test-content-with-non-followers" target="_blank" rel="noopener">PetaPixel: Instagram launches Trial Reels (dezembro de 2024)</a></li>
+    <li><a href="https://www.nexttv.com/news/mobile-videos-often-watched-without-audio-study-finds" target="_blank" rel="noopener">Next TV: estudo Verizon Media e Publicis sobre vídeo sem som e legendas (2019)</a></li>
+    <li><a href="https://bestmediainfo.com/insights/want-reels-ads-that-actually-work-meta-just-revealed-the-playbook-10866888" target="_blank" rel="noopener">BestMediaInfo: recomendações da Meta para anúncios em Reels (estudo com a Toluna)</a></li>
+    <li><a href="https://portal.cfm.org.br/noticias/cfm-atualiza-resolucao-da-publicidade-medica" target="_blank" rel="noopener">CFM: CFM atualiza a resolução da publicidade médica (Res. 2.336/2023)</a></li>
+    <li><a href="https://legismap.com.br/conteudos/artigos-e-noticias/conselho-federal-de-medicina-atualiza-regras-para-a-publicidade-medica" target="_blank" rel="noopener">Legismap: Resolução CFM 2.336/2023 publicada em 13/09/2023, vigência em 180 dias</a></li>
+    <li><a href="https://sorriai.com.br/blog/antes-e-depois-dentista-pode-postar" target="_blank" rel="noopener">Sorriai: antes e depois na odontologia (Res. CFO-196/2019)</a></li>
+    <li><a href="https://sorriai.com.br/blog/cfo-271-2025-o-que-mudou-e-o-que-continua-proibido" target="_blank" rel="noopener">Sorriai: CFO-271/2025, o que mudou e o que continua proibido</a></li>
+    <li><a href="https://crbm1.gov.br/duvidas/o-que-posso-divulgar-nas-redes-sociais/" target="_blank" rel="noopener">CRBM-1: o que o biomédico pode divulgar nas redes sociais</a></li>
+  </ol>
+</section>
+
+</main>
+
+<footer class="end">
+  <div class="inner">
+    <div class="logo"><svg aria-label="Logo ACTUS Mídia" viewBox="0 0 1929 613" fill="currentColor"><path d="M252.61,0C113.09,0,0,113.09,0,252.6s113.09,252.61,252.61,252.61,252.6-113.09,252.6-252.61S392.12,0,252.61,0ZM384.27,450.81c-36.54,24.34-75.69,37.23-113.25,37.32h-.3c-38.07,0-70.59-16.81-82.89-42.87-10.3-21.81-4.86-47.22,15.28-71.56,43.99-50.4,87.990-100.8,131.98-151.19-1.81-6.28-3.63-12.57-5.44-18.85-3.34-.99-8.17-2.35-14.13-3.72-1.48-.34-2.56-.56-3.04-.68-13.9-3.42-28.17-6.52-41.96-9.51-10.42-2.26-21.19-4.6-31.72-7.06-1.76-.41-5.81-1.46-10.92-2.78-16.16-4.19-49.59-12.85-52.36-11.83l-5.69,13.82c11.12,7.24,20.76,15.8,28.89,25.6,2.38,2.87,13.59,16.65,21.86,38.48,10.83,28.59,10.48,54.8,8.77,71.05-7.97-.09-15.94-.18-23.91-.27,2.17-9.34,8.74-42.67-9-78.62-16.71-33.87-44.6-48.98-53.53-53.37,6.78-12.35,13.56-24.69,20.34-37.04,60.18,13.81,120.36,27.62,180.55,41.44,2.28,6.77,4.55,13.61,6.8,20.52,1.66,5.08,3.28,10.14,4.88,15.18l.03.14c-22.24,26.54-44.88,53.24-67.92,80.06-21.24,24.72-42.41,49.08-63.52,73.09l-.13.16c-16.63,20.45-35.46,43.62-14.23,69.18,18.4,22.15,49.72,23.93,72.75,21.53,29.95-3.14,59.49-14.54,77.14-24.17,56.08-30.6,96.18-83.39,110.01-144.8,13.9-61.73.79-124.3-36.91-176.2-46.42-63.9-121.64-97.42-201.21-89.66-80.49,7.84-148.57,55.72-182.12,128.1-43.72,94.29-13.49,203.82,73.5,266.35l.28.2-10.05,15.22-.3-.21c-22.3-16.08-40.56-34.1-55.79-55.11-24.72-34.070-39.44-71.68-43.74-111.8-3.98-37.23,1.52-75.68,15.9-111.13,15.04-37.09,39.41-70.22,70.46-95.8,32.51-26.78,72-44.83,114.17-52.17,45.75-7.97,91.89-2.67,133.41,15.28,38.98,16.87,73.12,44.32,98.71,79.38,25.6,35.09,41.35,75.99,45.51,118.29,4.43,45.09-4.63,90.71-26.21,131.97-17.69,33.8-46.45,65.080-80.97,88.07Z"/><path d="M888.26,441.22h-59.2l-28.63-80.07c-26.19-35.72-71.95-54.54-116.04-48.41-4.07.57-20.79,4.24-22.67,6.94l-40.81,120.61h-15.73l36.99-112.86c-33.61,17.43-51.14,50.53-62.98,85.04-1.24.4-2.27-.18-3.36-.65-2.25-.97-20.51-11.48-20.51-12.69,16.09-21.930,34.1-43.89,54.46-62,11.63-10.34,24.25-17.69,37.84-25.07l82.59-239.34c.36-1.16,1.07-1.35,2.15-1.55,2.14-.4,19.78-.18,20.84.46l135.04,369.58ZM791.12,334.83l-68.43-195.18-56.44,165.57c44.33-11.86,90.44.22,124.87,29.61Z"/><path d="M1425.72,116.52h63.83l-42.43,224.45c-11.18,67.83,34.93,104.08,99.79,89.62,42.86-9.56,73.72-48.53,82.82-90.17l55.01-272.01,14.58,4.12-54.65,271.73c-10.27,43.54-44.91,81.99-87.81,95.35-47.35,14.75-123.6,9.07-155.58-33.63-29.59-39.51-19.34-83.44-10.43-127.76,10.87-54.06,24.82-107.48,34.87-161.71Z"/><path d="M1673.77,406.87c-.52-.91-.05-1.78.35-2.63,2.21-4.68,9.99-10.94,12.93-15.74,18.47,19.25,44.91,35.73,72.17,37.9,75.07,5.95,109.73-58.21,64.64-117.37-40.15-52.68-125.63-92.89-93.58-175.18,22.22-57.06,85.11-76.52,141.1-61.06,19.86,5.49,40.93,14.87,57.46,26.79.51,1.97-8.52,15.91-9.6,15.91-18.51-15.94-38.91-26.87-63.2-31.06-69.54-11.99-111.32,45.1-62.18,101.03,33.17,37.75,90.69,69.49,104.29,120.5,16.49,61.83-29.77,116.19-87.42,131.3-48.14,12.61-98.13-.69-136.98-30.38Z"/><path d="M1150.96,86.04l-15.72,47.13c-1.4.37-1.53-.36-2.32-.91-4.55-3.18-9.36-8.46-13.89-12.01-41.6-32.67-87.39-59.74-139.48-29.45-64.85,37.71-60.28,154.28-44.78,217.4,25.03,101.93,130.41,176.21,211.55,76.1,2.05-2.53,10.01-15.06,11.12-15.76,2.07-1.31,7.21,4.53,10.18,4.24-41.68,75.53-132.85,98.5-207.14,54.03-123.58-73.97-118.73-278.63,8.55-345.6,58.65-30.86,123.01-17.6,181.92,4.83Z"/><path d="M1323.97,85.06v355.23h-53.65V85.06h-92.51v-15.73h314.99l1.24,1.53c-.25,4.43,1.54,10.67-1.24,14.19h-168.83Z"/><path d="M1598.63,612.34h-10.85v-60.86l-27.18,48.99h-9.61l-27.18-48.99v60.86h-10.85v-79.11h12.66l30.4,55.78,30.4-55.78h12.21v79.11Z"/><path d="M1667.17,506.83l-17.35,16.16h-11.75l14.64-16.16h14.47ZM1652.2,612.34h-11.08v-79.11h11.08v79.11Z"/><path d="M1723.17,612.34h-28.48v-79.11h28.48c13.45,0,23.86,3.46,31.22,10.37,7.36,6.91,11.05,16.64,11.05,29.19s-3.68,22.27-11.05,29.19c-7.37,6.91-17.77,10.37-31.22,10.37ZM1723.17,542.83h-17.41v59.9h17.41c9.79,0,17.41-2.64,22.83-7.91,5.42-5.27,8.14-12.62,8.14-22.04s-2.71-16.76-8.14-22.04c-5.43-5.27-13.04-7.91-22.83-7.91Z"/><path d="M1813.82,612.34h-11.08v-79.11h11.08v79.11Z"/><path d="M1917,612.34l-9.1-20.91h-39.5l-9.04,20.91h-11.420l34.7-79.110h11.53l34.7,79.11h-11.87ZM1888.18,545.88l-15.71,36.17h31.36l-15.65-36.17Z"/></svg></div>
+    <p>Marketing para saúde e estética, de Campo Grande (MS). Pode compartilhar este material com quem quiser.</p>
+    <span class="sig">Marketing que gera confiança · @actusmidia</span>
+  </div>
+</footer>
+
+</body></html>
