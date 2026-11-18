@@ -86,7 +86,7 @@
       --glow-card:  0 0 0 1px rgba(0,168,89,0.2), 0 20px 60px rgba(0,0,0,0.7);
     }
 
-    html { scroll-behavior:smooth; font-size:16px; }
+    html { scroll-behavior:smooth; font-size:16px; overflow-x:hidden; }
 
     /* ── SCROLL PROGRESS BAR ── */
     #scroll-progress { position:fixed; top:0; left:0; height:2px; width:0%; background:var(--gradient-green); z-index:99999; transition:width 0.08s linear; box-shadow:0 0 8px rgba(0,168,89,0.6); pointer-events:none; }
@@ -585,7 +585,6 @@
       <li><a href="#planos">Planos</a></li>
       <li><a href="#projetos">Projetos</a></li>
       <li><a href="#sobre">Sobre</a></li>
-      <li><a href="/2027/">Paciente 2027</a></li>
     </ul>
     <div class="nav-actions">
       <button onclick="document.getElementById('modal-analise').style.display='flex'" class="btn btn-primary" style="padding:10px 20px;font-size:13px;">
@@ -601,7 +600,6 @@
   <a href="#planos"      class="mobile-link">Planos</a>
   <a href="#projetos"    class="mobile-link">Projetos</a>
   <a href="#sobre"       class="mobile-link">Sobre</a>
-  <a href="/2027/"       class="mobile-link">Paciente 2027</a>
   <a href="#cta"         class="mobile-link">Contato</a>
   <div class="mobile-menu-footer">
     <a href="https://www.instagram.com/actusmidia/" target="_blank" class="btn btn-outline" style="font-size:13px;">
@@ -992,6 +990,11 @@
   /* abre o "como funciona" ao navegar pelo link */
   function openProcesso(){ if(location.hash==='#processo'){ const d=document.getElementById('processo'); if(d) d.open=true; } }
   window.addEventListener('hashchange',openProcesso); openProcesso();
+
+  /* /#diagnostico abre o formulário de diagnóstico (usado por links externos, ex.: página /2027) */
+  function openDiagnostico(){ if(location.hash==='#diagnostico'){ const m=document.getElementById('modal-analise'); if(m) m.style.display='flex'; } }
+  document.addEventListener('DOMContentLoaded',openDiagnostico);
+  window.addEventListener('hashchange',openDiagnostico);
 
   /* ── PRELOADER ── */
   window.addEventListener('load', () => {

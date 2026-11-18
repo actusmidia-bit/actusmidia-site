@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name="robots" content="noindex, nofollow"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>O paciente de 2027</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,6 +101,18 @@ footer.end .inner{padding-block:36px 44px;display:flex;flex-direction:column;gap
 footer.end .logo{width:170px}
 footer.end p{color:var(--lav);font-size:.92rem}
 footer.end .sig{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--lime)}
+/* Próximo passo (CTA) */
+.next{background:var(--purple);color:var(--paper);border-radius:22px;padding:30px 26px;display:flex;flex-direction:column;gap:16px}
+.next .tag{color:var(--lime)}
+.next h2{color:var(--paper)}
+.next h2 i{color:var(--lime)}
+.next p{color:var(--lav);max-width:54ch}
+.next .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:700;font-size:.95rem;text-decoration:none;line-height:1.2}
+.btn.primary{background:var(--lime);color:var(--purple)}
+.btn.ghost{border:1.5px solid var(--lav);color:var(--paper)}
+.btn:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+@media (max-width:460px){.next{padding:26px 20px}.btn{width:100%}}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 </style>
 
@@ -347,6 +359,16 @@ footer.end .sig{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;c
     <li><div><b>Seu rosto em vídeo,</b> explicando como você decide, gravado no consultório.</div></li>
     <li><div><b>Leia a regra do seu conselho</b> antes do próximo antes e depois.</div></li>
   </ol>
+</section>
+
+<section class="next" id="proximo-passo">
+  <span class="tag">Próximo passo</span>
+  <h2>Quer aplicar isso <i>na sua clínica?</i></h2>
+  <p>A Actus avalia como o seu perfil aparece hoje e mostra por onde começar. Você pode pedir o diagnóstico pelo site ou falar direto com a gente no WhatsApp.</p>
+  <div class="cta">
+    <a class="btn primary" href="/#diagnostico">Solicitar diagnóstico</a>
+    <a class="btn ghost" href="https://api.whatsapp.com/send?phone=5567996119356&text=Ol%C3%A1%2C+li+o+material+%22O+paciente+de+2027%22+e+quero+conversar+com+a+Actus!" target="_blank" rel="noopener">Conversar no WhatsApp</a>
+  </div>
 </section>
 
 <section class="sources" id="fontes">
